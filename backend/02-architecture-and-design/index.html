@@ -1357,6 +1357,31 @@
 <hr />
 <h2 id="1">1. 헥사고날 아키텍처</h2>
 <p>모든 도메인은 <strong>Ports &amp; Adapters (Hexagonal) Architecture</strong>를 따릅니다.</p>
+<pre class="mermaid"><code>graph LR
+    subgraph Driving["Driving (Input)"]
+        A[FastAPI Router]
+        B[APScheduler]
+    end
+
+    subgraph Core["Application Core"]
+        C[Input Port - ABC]
+        D[Service - UseCase]
+        E[Output Port - ABC]
+    end
+
+    subgraph Driven["Driven (Output)"]
+        F[PostgreSQL]
+        G["External API (i-flow)"]
+        H[File System]
+    end
+
+    A --&gt; C
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    E --&gt; G
+    E --&gt; H</code></pre>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{domain}/
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── adapter/input/controllers/    → Driving Adapter (FastAPI Router)
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── adapter/output/repositories/  → Driven Adapter (DB)
@@ -1368,6 +1393,29 @@
 </code></pre></div>
 <hr />
 <h2 id="2">2. 도메인 구조</h2>
+<pre class="mermaid"><code>graph TD
+    WS[workspace] --&gt; PROJ[project]
+    PROJ --&gt; JOB[job]
+    JOB --&gt; CRAWL[crawling]
+    JOB --&gt; AIFIX["ai_auto_fix"]
+    JOB --&gt; SCRIPT[scripts]
+    JOB --&gt; ENHANCE["script_enhancement"]
+
+    SCHED[scheduler] -.-&gt; CRAWL
+    STORAGE[storage] -.-&gt; CRAWL
+    WORKFLOW[workflow] -.-&gt; AIFIX
+    ADMIN[admin] -.-&gt; WS
+    SHARED[shared] -.-&gt; WS
+    SHARED -.-&gt; SCHED
+    SHARED -.-&gt; STORAGE
+
+    style WS fill:#4051B5,color:#fff
+    style PROJ fill:#4051B5,color:#fff
+    style JOB fill:#4051B5,color:#fff
+    style CRAWL fill:#e53935,color:#fff
+    style AIFIX fill:#FB8C00,color:#fff
+    style SCHED fill:#43A047,color:#fff
+    style WORKFLOW fill:#8E24AA,color:#fff</code></pre>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>backend/
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── workspace/                       # 워크스페이스 도메인
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   └── project/                     # 프로젝트 서브 도메인
@@ -1413,72 +1461,71 @@
 <hr />
 <h2 id="4-erd">4. ERD</h2>
 <h3 id="41">4.1 테이블 관계도</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>erDiagram
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    workspaces ||--o{ projects : &quot;has many&quot;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    workspaces ||--o{ categories : &quot;has many&quot;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    categories ||--o{ projects : &quot;has many&quot;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    projects ||--o{ jobs : &quot;has many&quot;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    jobs ||--o{ crawling_sessions : &quot;has many&quot;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    jobs ||--o{ job_script_histories : &quot;has many&quot;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    crawling_sessions ||--o{ ai_auto_fix_sessions : &quot;has many&quot;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    crawling_sessions ||--o{ post_crawling_api_results : &quot;has many&quot;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    ai_auto_fix_sessions ||--o{ ai_auto_fix_analyses : &quot;has many&quot;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    workspaces {
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        string id PK
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        string name UK
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        string code
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        string active_yn
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        string data_api_url
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    }
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    projects {
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        string id PK
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        string name UK
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        string advertiser_name
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>        string campaign_name
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>        string media_id
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        int category_id FK
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        string workspace_id FK
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        boolean is_api_transmission_enabled
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    }
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    jobs {
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        string id PK
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>        string project_id FK
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>        string name
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>        string status
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>        boolean is_active
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>        string cron_schedule
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>        string script_path
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>        string script_type
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    }
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    crawling_sessions {
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>        string id PK
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>        string job_id FK
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>        string status
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>        json config
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>        boolean success
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>        float execution_time
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    }
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>
-<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>    ai_auto_fix_sessions {
-<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>        string id PK
-<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>        string crawling_session_id FK
-<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>        string job_id FK
-<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>        string project_id FK
-<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>        string status
-<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>        int max_retries
-<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>    }
-<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>
-<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>    system_settings {
-<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>        int id PK
-<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>        int max_concurrent_jobs
-<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>        int log_retention_days
-<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>        boolean auto_cleanup
-<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>    }
-</code></pre></div>
+<pre class="mermaid"><code>erDiagram
+    workspaces ||--o{ projects : "has many"
+    workspaces ||--o{ categories : "has many"
+    categories ||--o{ projects : "has many"
+    projects ||--o{ jobs : "has many"
+    jobs ||--o{ crawling_sessions : "has many"
+    jobs ||--o{ job_script_histories : "has many"
+    crawling_sessions ||--o{ ai_auto_fix_sessions : "has many"
+    crawling_sessions ||--o{ post_crawling_api_results : "has many"
+    ai_auto_fix_sessions ||--o{ ai_auto_fix_analyses : "has many"
+
+    workspaces {
+        string id PK
+        string name UK
+        string code
+        string active_yn
+        string data_api_url
+    }
+
+    projects {
+        string id PK
+        string name UK
+        string advertiser_name
+        string campaign_name
+        string media_id
+        int category_id FK
+        string workspace_id FK
+        boolean is_api_transmission_enabled
+    }
+
+    jobs {
+        string id PK
+        string project_id FK
+        string name
+        string status
+        boolean is_active
+        string cron_schedule
+        string script_path
+        string script_type
+    }
+
+    crawling_sessions {
+        string id PK
+        string job_id FK
+        string status
+        json config
+        boolean success
+        float execution_time
+    }
+
+    ai_auto_fix_sessions {
+        string id PK
+        string crawling_session_id FK
+        string job_id FK
+        string project_id FK
+        string status
+        int max_retries
+    }
+
+    system_settings {
+        int id PK
+        int max_concurrent_jobs
+        int log_retention_days
+        boolean auto_cleanup
+    }</code></pre>
 <h3 id="42">4.2 주요 테이블</h3>
 <table>
 <thead>
@@ -1580,32 +1627,56 @@
 <hr />
 <h2 id="6">6. 핵심 로직</h2>
 <h3 id="61">6.1 크롤링 실행 흐름</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sequenceDiagram
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    participant SCHED as APScheduler
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    participant API as Backend API
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    participant EXEC as Crawler (Docker/Local)
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    participant IFLOW as i-flow API
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    SCHED-&gt;&gt;API: 놓친 실행 확인 + PENDING 세션 생성
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    SCHED-&gt;&gt;API: PENDING 세션 픽업
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    API-&gt;&gt;EXEC: 크롤러 실행 (Playwright)
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    EXEC--&gt;&gt;API: 수집 데이터 저장
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    API-&gt;&gt;IFLOW: 1차 API (analyze)
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    IFLOW--&gt;&gt;API: 분석 결과
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    API-&gt;&gt;IFLOW: 2차 API (upload)
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    IFLOW--&gt;&gt;API: 업로드 결과
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    API-&gt;&gt;API: 세션 COMPLETED
-</code></pre></div>
+<pre class="mermaid"><code>sequenceDiagram
+    participant SCHED as APScheduler
+    participant API as Backend API
+    participant EXEC as Crawler (Docker/Local)
+    participant IFLOW as i-flow API
+
+    SCHED-&gt;&gt;API: 놓친 실행 확인 + PENDING 세션 생성
+    SCHED-&gt;&gt;API: PENDING 세션 픽업
+    API-&gt;&gt;EXEC: 크롤러 실행 (Playwright)
+    EXEC--&gt;&gt;API: 수집 데이터 저장
+    API-&gt;&gt;IFLOW: 1차 API (analyze)
+    IFLOW--&gt;&gt;API: 분석 결과
+    API-&gt;&gt;IFLOW: 2차 API (upload)
+    IFLOW--&gt;&gt;API: 업로드 결과
+    API-&gt;&gt;API: 세션 COMPLETED</code></pre>
 <h3 id="62-ai-auto-fix">6.2 AI Auto Fix</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>크롤링 실패 → AI Auto Fix 세션 생성 (PENDING)
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>→ 실패 로그/스냅샷 기반 AI 분석 (ANALYZING)
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>→ 스크립트 수정안 생성 (COMPLETED)
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>→ (선택) 수정된 스크립트로 재실행 / 원본에 적용
-</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    A["크롤링 실패"] --&gt; B["AI Auto Fix 세션 생성&lt;br/&gt;(PENDING)"]
+    B --&gt; C["실패 로그/스냅샷&lt;br/&gt;AI 분석 (ANALYZING)"]
+    C --&gt; D["스크립트 수정안 생성&lt;br/&gt;(COMPLETED)"]
+    D --&gt; E{"사용자 선택"}
+    E --&gt;|재실행| F["수정 스크립트로 재실행"]
+    E --&gt;|적용| G["원본 스크립트에 적용"]
+
+    style A fill:#e53935,color:#fff
+    style D fill:#43A047,color:#fff</code></pre>
 <h3 id="63">6.3 상태 전이</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Job:     IDLE → PENDING → RUNNING → COMPLETED / FAILED → (재스케줄)
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Session: PENDING → RUNNING → COMPLETED / FAILED
-</code></pre></div>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; IDLE : Job 생성
+
+    state Job {
+        IDLE --&gt; PENDING : 스케줄 트리거
+        PENDING --&gt; RUNNING : 세션 픽업
+        RUNNING --&gt; COMPLETED : 성공
+        RUNNING --&gt; FAILED : 실패
+        COMPLETED --&gt; IDLE : 재스케줄
+        FAILED --&gt; IDLE : 재스케줄
+    }
+
+    state Session {
+        state "PENDING" as SP
+        state "RUNNING" as SR
+        state "COMPLETED" as SC
+        state "FAILED" as SF
+
+        [*] --&gt; SP
+        SP --&gt; SR : 실행 시작
+        SR --&gt; SC : 성공
+        SR --&gt; SF : 실패
+    }</code></pre>
 <h3 id="64-api-incross-i-flow">6.4 후처리 API (Incross i-flow)</h3>
 <table>
 <thead>
