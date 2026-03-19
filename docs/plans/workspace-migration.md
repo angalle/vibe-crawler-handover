@@ -116,6 +116,20 @@ projects/<project-id>/
 
 ## 5. 실행 순서
 
+```mermaid
+flowchart LR
+    A["0. 실행 중<br/>세션 확인"] --> B["1. DB 백업<br/>(pg_dump)"]
+    B --> C["2. DB UPDATE<br/>(workspace_id, name)"]
+    C --> D["3. 파일시스템<br/>mv 실행"]
+    D --> E["4. 검증"]
+    E --> F["5. 완료 처리"]
+
+    style A fill:#FB8C00,color:#fff
+    style C fill:#4051B5,color:#fff
+    style D fill:#4051B5,color:#fff
+    style F fill:#43A047,color:#fff
+```
+
 | 단계 | 작업 | 비고 |
 |---|---|---|
 | 0 | 현재 실행 중인 세션 없는지 확인 | `docker ps --filter name=crawler-` |
@@ -189,6 +203,19 @@ WHERE p.workspace_id = '22222222-2222-2222-2222-222222222222'
 > ⚠️ 이관 시 누락된 항목들이 발견되어 보완 필요
 
 ### 9-1. 문제 요약
+
+```mermaid
+flowchart TD
+    A["이관: projects.workspace_id<br/>22222222 → 11111111"] --> B["jobs.script_path<br/>❌ 미업데이트"]
+    B --> C["세션 디렉토리:<br/>11111111에 생성"]
+    B --> D["스크립트 참조:<br/>22222222에서 읽음"]
+    C --> E["경로 불일치 💥"]
+    D --> E
+    E --> F["백엔드가 구 경로에<br/>scripts/ 자동 재생성"]
+
+    style B fill:#e53935,color:#fff
+    style E fill:#b71c1c,color:#fff
+```
 
 이관 작업에서 `projects` 테이블만 업데이트하고, **`jobs.script_path`는 업데이트하지 않음**.
 이로 인해 이관 후에도 구 workspace(`22222222-...`) 경로를 참조하는 문제 발생.

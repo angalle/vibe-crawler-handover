@@ -17,6 +17,15 @@
 
 ## 2. system_storage 디렉토리별 용량
 
+```mermaid
+pie title system_storage 용량 분포
+    "workspaces (36GB)" : 36000
+    "workflow_logs (62MB)" : 62
+    "mdc (26MB)" : 26
+    "projects Legacy (20MB)" : 20
+    "기타" : 1
+```
+
 | 디렉토리 | 용량 | 자동 정리 | 상태 |
 |---|---|---|---|
 | `workspaces/` | **36GB** | ✅ 10일 보관 | 정상 (세션 로그 자동 삭제) |
@@ -31,6 +40,13 @@
 ---
 
 ## 3. 워크스페이스 상세
+
+```mermaid
+pie title 워크스페이스 용량 비교
+    "MINDK (33GB)" : 33
+    "INCRO (3.5GB)" : 3.5
+    "legacy_archive" : 0.001
+```
 
 | 워크스페이스 | 용량 | 프로젝트 수 |
 |---|---|---|

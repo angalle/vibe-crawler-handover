@@ -8,6 +8,17 @@
 
 ## 배경
 
+```mermaid
+flowchart LR
+    A["매일 새벽 4시<br/>스케줄러 실행"] --> B["get_old_session_directories()"]
+    B --> C{"날짜 > 보관기간?"}
+    C -->|10일 초과| D["rm -rf 삭제"]
+    C -->|10일 이내| E["유지"]
+
+    style D fill:#e53935,color:#fff
+    style E fill:#43A047,color:#fff
+```
+
 `get_old_session_directories()`에서 경로 불일치 버그를 수정함 (`base_path/RESULTS_DIR` → `results_base_path`).
 이전까지 자동 정리가 작동하지 않아 2월 데이터까지 남아있었음.
 

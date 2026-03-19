@@ -16,6 +16,18 @@
 
 **PID 저장 실패 → 좀비 감지기 오판 → 프로세스 미종료**
 
+```mermaid
+flowchart TD
+    A["_pid_callback이<br/>외부 DB 세션 공유"] --> B["커밋 안 됨<br/>process_identifier = NULL"]
+    B --> C["좀비 감지기: 유예 5분 초과<br/>+ PID NULL + 결과 없음"]
+    C --> D["FAILED 처리<br/>(실제로는 정상 실행 중)"]
+    D --> E["kill 조건: PID NULL이면 스킵"]
+    E --> F["좀비 프로세스 방치 💀"]
+
+    style A fill:#e53935,color:#fff
+    style F fill:#b71c1c,color:#fff
+```
+
 1. **PID 콜백 DB 세션 문제**: `_pid_callback`이 외부 `session_repo`의 DB 세션을 공유하여 커밋이 안 됨 → `process_identifier = NULL`
 2. **좀비 감지기 오판**: 유예 5분 초과 + PID NULL + 결과 파일 없음 → FAILED 처리 (실제로는 정상 실행 중)
 3. **프로세스 미종료**: `process_identifier = NULL`이면 kill 조건문이 스킵됨 → 좀비 프로세스 방치

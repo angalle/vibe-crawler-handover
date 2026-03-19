@@ -32,6 +32,31 @@
 
 ## 3. 서버 재시작/배포 시 컨테이너 관리
 
+```mermaid
+flowchart TD
+    subgraph Restart["서버 재시작"]
+        A["서버 시작 10초 후"] --> B["RUNNING 세션 조회"]
+        B --> C{"PID/Docker 살아있나?"}
+        C -->|살아있음| D["무시"]
+        C -->|죽음| E["FAILED 처리 + Job 재시작"]
+    end
+
+    subgraph Deploy["배포 시"]
+        F["docker-compose down"] --> G["docker system prune"]
+        G --> H["docker-compose up"]
+        H -.->|한계| I["crawler-xxx는 미종료"]
+    end
+
+    subgraph Cleanup["Docker Cleanup (1시간)"]
+        J["24h+ 미사용 리소스 정리"]
+        J -.->|한계| K["실행 중 컨테이너 미포함"]
+    end
+
+    style E fill:#e53935,color:#fff
+    style I fill:#FB8C00,color:#fff
+    style K fill:#FB8C00,color:#fff
+```
+
 ### 3-1. 서버 재시작 시 (`recover_zombie_jobs_service.py`)
 - 서버 시작 10초 후 1회 실행
 - RUNNING 세션 조회 → `process_identifier` 기준 PID/Docker 확인
@@ -65,10 +90,17 @@ docker-compose up -d       ← 새 이미지로 재시작
 ### ✅ 4-1. 고아 컨테이너 자동 정리 추가
 
 Docker Cleanup Service에 **역방향 검사** 로직 추가:
-1. `docker ps --filter name=crawler-*`로 실행 중인 크롤러 컨테이너 목록 조회
-2. 컨테이너명에서 `session_id` 추출
-3. DB에서 해당 세션이 RUNNING인지 확인
-4. RUNNING이 아니거나 DB에 없으면 → `docker stop` + `docker rm -f`
+
+```mermaid
+flowchart LR
+    A["docker ps<br/>--filter crawler-*"] --> B["session_id 추출"]
+    B --> C{"DB에서<br/>RUNNING?"}
+    C -->|Yes| D["유지"]
+    C -->|No / 없음| E["docker stop<br/>+ docker rm -f"]
+
+    style D fill:#43A047,color:#fff
+    style E fill:#e53935,color:#fff
+```
 
 **변경 파일:**
 - `docker_cleanup_port.py` — 메서드 2개 추가
