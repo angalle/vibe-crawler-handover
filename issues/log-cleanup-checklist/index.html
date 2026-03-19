@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/frontend/04-issues-and-history/">
+        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/issues/log-cleanup-checklist/">
       
       
-        <link rel="prev" href="../03-operations-guide/">
+        <link rel="prev" href="../bug-002-pid-zombie/">
       
       
-        <link rel="next" href="../../plans/server-scaling/">
+        <link rel="next" href="../storage-analysis/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>이슈 및 히스토리 - Vibe Crawling Platform - 인수인계 문서</title>
+        <title>로그 자동 정리 검증 - Vibe Crawling Platform - 인수인계 문서</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              이슈 및 히스토리
+              로그 자동 정리 검증
             
           </span>
         </div>
@@ -457,8 +457,6 @@
       
   
   
-    
-  
   
   
     
@@ -471,11 +469,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -496,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -514,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-project-overview/" class="md-nav__link">
+      <a href="../../frontend/01-project-overview/" class="md-nav__link">
         
   
   
@@ -542,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-architecture-and-design/" class="md-nav__link">
+      <a href="../../frontend/02-architecture-and-design/" class="md-nav__link">
         
   
   
@@ -570,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-operations-guide/" class="md-nav__link">
+      <a href="../../frontend/03-operations-guide/" class="md-nav__link">
         
   
   
@@ -595,37 +595,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    이슈 및 히스토리
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../frontend/04-issues-and-history/" class="md-nav__link">
         
   
   
@@ -641,109 +614,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="목차">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 미해결 이슈
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 해결된 버그
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 기술 주의사항
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 기술 주의사항">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-orval-vue-3-watch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Orval + Vue 3 watch 타이밍
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 다중 테넌트 (워크스페이스)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 API 코드 재생성
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 아토믹 디자인 규칙
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -877,8 +747,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -889,13 +761,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -916,7 +786,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -934,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../issues/bug-002-pid-zombie/" class="md-nav__link">
+      <a href="../bug-002-pid-zombie/" class="md-nav__link">
         
   
   
@@ -959,10 +829,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../issues/log-cleanup-checklist/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    로그 자동 정리 검증
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -978,6 +875,237 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        배경
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-17-1320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정리 전 상태 (2026-03-17 13:20 기준)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="정리 전 상태 (2026-03-17 13:20 기준)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전체 디스크
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        날짜별 상세 (workspace 구조)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        예상 결과
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정리 후 검증 방법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="정리 후 검증 방법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 백엔드 로그 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 디스크 용량 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 디스크 여유 공간 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        검증 결과 (정리 후 기록)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수동 정리 기록 (2026-03-18)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="수동 정리 기록 (2026-03-18)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-3c042a40-2026-03-17-1325-kst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1차. 프로젝트 3c042a40 선행 정리 (2026-03-17 13:25 KST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-7-2026-03-18-0950-kst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2차. 3월 7일 이전 남은 폴더 수동 삭제 (2026-03-18 09:50 KST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-19-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📅 내일(2026-03-19) 새벽 4시 검증 대상
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수동 정리 기록 (2026-03-19)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="수동 정리 기록 (2026-03-19)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-20260308-2026-03-19-1001-kst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3차. 20260308 폴더 수동 삭제 (2026-03-19 10:01 KST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📅 내일(2026-03-20) 자동 정리 검증 대상
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -990,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../issues/storage-analysis/" class="md-nav__link">
+      <a href="../storage-analysis/" class="md-nav__link">
         
   
   
@@ -1018,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../issues/zombie-container-disk/" class="md-nav__link">
+      <a href="../zombie-container-disk/" class="md-nav__link">
         
   
   
@@ -1073,10 +1201,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 미해결 이슈
+        배경
       
     </span>
   </a>
@@ -1084,33 +1212,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2026-03-17-1320" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 해결된 버그
+        정리 전 상태 (2026-03-17 13:20 기준)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 기술 주의사항
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 기술 주의사항">
+    <nav class="md-nav" aria-label="정리 전 상태 (2026-03-17 13:20 기준)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-orval-vue-3-watch" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 Orval + Vue 3 watch 타이밍
+        전체 디스크
       
     </span>
   </a>
@@ -1118,10 +1235,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
+  <a href="#workspace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 다중 테넌트 (워크스페이스)
+        날짜별 상세 (workspace 구조)
       
     </span>
   </a>
@@ -1129,21 +1246,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-api" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 API 코드 재생성
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 아토믹 디자인 규칙
+        예상 결과
       
     </span>
   </a>
@@ -1152,6 +1258,156 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        정리 후 검증 방법
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="정리 후 검증 방법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 백엔드 로그 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 디스크 용량 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 디스크 여유 공간 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        검증 결과 (정리 후 기록)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수동 정리 기록 (2026-03-18)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="수동 정리 기록 (2026-03-18)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-3c042a40-2026-03-17-1325-kst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1차. 프로젝트 3c042a40 선행 정리 (2026-03-17 13:25 KST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-3-7-2026-03-18-0950-kst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2차. 3월 7일 이전 남은 폴더 수동 삭제 (2026-03-18 09:50 KST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-19-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📅 내일(2026-03-19) 새벽 4시 검증 대상
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        수동 정리 기록 (2026-03-19)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="수동 정리 기록 (2026-03-19)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-20260308-2026-03-19-1001-kst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3차. 20260308 폴더 수동 삭제 (2026-03-19 10:01 KST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2026-03-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📅 내일(2026-03-20) 자동 정리 검증 대상
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1175,92 +1431,354 @@
   
 
 
-<h1 id="_1">프론트엔드 — 이슈 리스트 및 히스토리</h1>
+<h1 id="_1">로그 자동 정리 검증 체크리스트</h1>
+<blockquote>
+<p>작성일: 2026-03-17 13:22 KST
+예정일: 2026-03-18 04:00 KST (스케줄러 자동 실행)
+상태: ⏳ <strong>자동 정리 실행 대기 중</strong> — 아래 검증 결과가 모두 체크되면 완료 처리</p>
+</blockquote>
 <hr />
-<h2 id="1">1. 미해결 이슈</h2>
+<h2 id="_2">배경</h2>
+<p><code>get_old_session_directories()</code>에서 경로 불일치 버그를 수정함 (<code>base_path/RESULTS_DIR</code> → <code>results_base_path</code>).
+이전까지 자동 정리가 작동하지 않아 2월 데이터까지 남아있었음.</p>
+<p><strong>배포 시점</strong>: 2026-03-17 10:47 KST
+<strong>보관 기간</strong>: 10일 (<code>auto_cleanup = true</code>)
+<strong>삭제 기준일</strong>: 2026-03-08 (3/18 새벽 4시 기준)</p>
+<hr />
+<h2 id="2026-03-17-1320">정리 전 상태 (2026-03-17 13:20 기준)</h2>
+<h3 id="_3">전체 디스크</h3>
 <table>
 <thead>
 <tr>
-<th>#</th>
-<th>분류</th>
-<th>내용</th>
-<th>비고</th>
+<th>항목</th>
+<th>값</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>Orval</td>
-<td><code>watch</code> 콜백 실행 타이밍 불안정</td>
-<td>Vue 3 Composition API에서 간헐적 발생</td>
+<td>전체 workspace 데이터</td>
+<td><strong>67.5GB</strong></td>
 </tr>
 <tr>
-<td>2</td>
-<td>구조</td>
-<td>일부 pages 컨포넌트가 너무 큼 (ProjectDetailPage 117KB)</td>
-<td>features로 로직 분리 필요</td>
+<td>Legacy <code>crawling_results/</code></td>
+<td>비어있음 (0)</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="2">2. 해결된 버그</h2>
+<h3 id="workspace">날짜별 상세 (workspace 구조)</h3>
 <table>
 <thead>
 <tr>
-<th>#</th>
-<th>증상</th>
-<th>원인</th>
-<th>해결</th>
+<th>날짜</th>
+<th>용량</th>
+<th>디렉토리 수</th>
+<th>삭제 여부</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>AI Improvement 버튼 클릭 시 저장되지 않은 데이터로 실행</td>
-<td>사용자가 업로드 후 저장하지 않고 바로 클릭</td>
-<td>UI 플로우에 저장 강제 단계 추가</td>
+<td>20260218</td>
+<td>2.48GB</td>
+<td>8</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260219</td>
+<td>5.55GB</td>
+<td>8</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260220</td>
+<td>4.64GB</td>
+<td>11</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260221</td>
+<td>2.44GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260222</td>
+<td>1.28GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260223</td>
+<td>3.53GB</td>
+<td>11</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260224</td>
+<td>1.27GB</td>
+<td>10</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260225</td>
+<td>1.27GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260226</td>
+<td>2.47GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260227</td>
+<td>3.70GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260228</td>
+<td>1.29GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260301</td>
+<td>1.28GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260302</td>
+<td>1.29GB</td>
+<td>10</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260303</td>
+<td>1.29GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260304</td>
+<td>1.30GB</td>
+<td>9</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260305</td>
+<td>1.31GB</td>
+<td>10</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260306</td>
+<td>1.32GB</td>
+<td>10</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260307</td>
+<td>1.27GB</td>
+<td>10</td>
+<td>✅ 삭제</td>
+</tr>
+<tr>
+<td>20260308</td>
+<td>1.30GB</td>
+<td>10</td>
+<td>⏳ 유지 (경계)</td>
+</tr>
+<tr>
+<td>20260309</td>
+<td>1.30GB</td>
+<td>11</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260310</td>
+<td>1.31GB</td>
+<td>12</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260311</td>
+<td>1.26GB</td>
+<td>12</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260312</td>
+<td>1.29GB</td>
+<td>12</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260313</td>
+<td>3.75GB</td>
+<td>12</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260314</td>
+<td>4.07GB</td>
+<td>12</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260315</td>
+<td>3.89GB</td>
+<td>12</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260316</td>
+<td>0.31GB</td>
+<td>15</td>
+<td>⏳ 유지</td>
+</tr>
+<tr>
+<td>20260317</td>
+<td>10.01GB</td>
+<td>14</td>
+<td>⏳ 유지</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">예상 결과</h3>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>삭제 대상</td>
+<td>20260218 ~ 20260307 (20일분)</td>
+</tr>
+<tr>
+<td>삭제 예상 용량</td>
+<td><strong>~37.7GB</strong></td>
+</tr>
+<tr>
+<td>삭제 디렉토리 수</td>
+<td>~159개</td>
+</tr>
+<tr>
+<td>정리 후 남는 용량</td>
+<td><strong>~29.8GB</strong></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="3">3. 기술 주의사항</h2>
-<h3 id="31-orval-vue-3-watch">3.1 Orval + Vue 3 watch 타이밍</h3>
+<h2 id="_5">정리 후 검증 방법</h2>
+<h3 id="1">1. 백엔드 로그 확인</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 운영서버 접속 후</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>logs<span class="w"> </span>vibe-crawler-backend<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;로그 정리&quot;</span>
+</code></pre></div>
+<p>출력에 아래와 같은 내용이 있어야 함:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>로그 정리 완료 - 디렉토리: 20개, 파일: XXX개, 크기: XXXMB
+</code></pre></div></p>
+<h3 id="2">2. 디스크 용량 확인</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 운영서버에서 실행</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>du<span class="w"> </span>-sh<span class="w"> </span>~/vibe-deployment/system_storage/workspaces/*/projects/*/sessions/*<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-t/<span class="w"> </span>-k11
+</code></pre></div>
 <ul>
-<li><strong>문제</strong>: Orval 자동 생성 API 훅에서 <code>watch</code> 콜백 실행 타이밍이 불안정</li>
-<li><strong>대응</strong>: <code>watchEffect</code> 대신 명시적 <code>watch</code>와 <code>nextTick</code> 조합 사용</li>
-<li><strong>예시</strong>:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// ❌ 불안정</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">watchEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="c1">// Orval 훅의 데이터 참조</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">})</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// ✅ 안정</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nx">watch</span><span class="p">(</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">queryResult</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">newData</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">nextTick</span><span class="p">()</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="c1">// 데이터 처리</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">)</span>
-</code></pre></div></li>
+<li>20260218 ~ 20260307 폴더가 <strong>존재하지 않아야</strong> 함</li>
+<li>20260308 이후 폴더만 남아있어야 함</li>
 </ul>
-<h3 id="32">3.2 다중 테넌트 (워크스페이스)</h3>
+<h3 id="3">3. 디스크 여유 공간 확인</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>df<span class="w"> </span>-h<span class="w"> </span>/
+</code></pre></div>
 <ul>
-<li>워크스페이스 전환 시 이전 워크스페이스 데이터가 잠시 표시될 수 있음</li>
-<li>전환 시 Vue Query 캐시 무효화 필요</li>
-<li>백엔드에서 <code>workspace_id</code> 필터로 데이터 격리 보장됨</li>
+<li>정리 전 100% 사용 → 정리 후 <strong>약 37GB 확보</strong> 예상</li>
 </ul>
-<h3 id="33-api">3.3 API 코드 재생성</h3>
+<hr />
+<h2 id="_6">검증 결과 (정리 후 기록)</h2>
+<blockquote>
+<p>⚠️ 서버 재배포(또는 스케줄링 타이밍) 이슈로 인해 3월 18일 오전 기준 아직 자동 삭제가 수행되지 않았습니다.</p>
+</blockquote>
 <ul>
-<li>백엔드 API 스펙 변경 후 반드시 <code>yarn generate:api</code> 실행</li>
-<li>생성된 <code>src/api/</code> 코드는 직접 수정 금지</li>
-<li>Orval 설정: <code>orval.config.ts</code></li>
+<li>[ ] 백엔드 로그에 "로그 정리 완료" 메시지 확인 (컨테이너 재시작으로 로그 확인 안됨)</li>
+<li>[ ] 20260307 이전 폴더 삭제 확인 (20260218 ~ 20260307 폴더 여전히 존재)</li>
+<li>[ ] <code>df -h /</code> 디스크 여유 공간 확보 확인 (현재 38GB 여유, 정리 전 수동삭제로 확보한 용량 유지 중)</li>
+<li>[x] 확인 날짜/시간: 2026-03-18 09:48 KST</li>
+<li>[ ] 실제 삭제 용량: 미실행</li>
+<li>[ ] 정리 후 디스크 사용률: 61% (58GB / 96GB)</li>
 </ul>
-<h3 id="34">3.4 아토믹 디자인 규칙</h3>
+<hr />
+<h2 id="2026-03-18">수동 정리 기록 (2026-03-18)</h2>
+<h3 id="1-3c042a40-2026-03-17-1325-kst">1차. 프로젝트 <code>3c042a40</code> 선행 정리 (2026-03-17 13:25 KST)</h3>
 <ul>
-<li>atoms에 API 호출/store 접근 금지</li>
-<li>molecules에서 atoms만 import (다른 molecules 참조 피할 것)</li>
-<li>새 컨포넌트 작성 시 반드시 계층 확인 (비즈니스 로직 → organisms/features, 레이아웃 → templates)</li>
+<li>삭제 범위: <code>20260218 ~ 20260307</code> (18개 날짜 폴더)</li>
+<li>삭제 용량: <strong>~37GB</strong></li>
+<li>디스크 사용률: 96GB/96GB (100%) → 47GB/96GB (49%)</li>
+</ul>
+<h3 id="2-3-7-2026-03-18-0950-kst">2차. 3월 7일 이전 남은 폴더 수동 삭제 (2026-03-18 09:50 KST)</h3>
+<ul>
+<li>스케줄러 미작동으로 인해 남은 고아 폴더 강제 삭제</li>
+<li>대상 폴더 수: <strong>151개</strong></li>
+<li>대상 용량: <strong>2.9GB</strong></li>
+<li><code>xargs rm -rf</code> 를 통해 삭제 완료</li>
+</ul>
+<hr />
+<h2 id="2026-03-19-4">📅 내일(2026-03-19) 새벽 4시 검증 대상</h2>
+<p>내일이 되면 <strong>20260308</strong> 날짜 폴더가 10일을 초과하게 되어 삭제 대상이 됩니다.
+스케줄러가 정상 작동한다면 아래 10개 폴더가 자동으로 삭제되어야 합니다.</p>
+<p><strong>삭제 대상 폴더 목록 (총 10개, 약 1.3GB)</strong>
+| Workspace | Project | Folder | Size |
+|---|---|---|---|
+| <code>1111...</code> | <code>37703364</code> | <code>20260308</code> | 8.7M |
+| <code>1111...</code> | <code>470f8afa</code> | <code>20260308</code> | 17M |
+| <code>1111...</code> | <code>57650074</code> | <code>20260308</code> | 5.8M |
+| <code>1111...</code> | <code>7803af8a</code> | <code>20260308</code> | 9.4M |
+| <code>1111...</code> | <code>89e5483e</code> | <code>20260308</code> | 22M |
+| <code>1111...</code> | <code>f7cad62f</code> | <code>20260308</code> | 9.6M |
+| <code>1111...</code> | <code>fa7aaf1d</code> | <code>20260308</code> | 5.1M |
+| <code>2222...</code> | <code>14143f81</code> | <code>20260308</code> | 5.8M |
+| <code>2222...</code> | <code>3c042a40</code> | <code>20260308</code> | 1.2G |
+| <code>2222...</code> | <code>e0b0a404</code> | <code>20260308</code> | 46M |</p>
+<ul>
+<li>[x] 19일 오전, 위 10개 폴더가 모두 삭제되었는지 확인 → ✅ 수동 삭제 완료 (아래 기록)</li>
+<li>[ ] 백엔드 로그에서 <code>로그 정리 완료</code> 메시지 유무 확인 → 코드 미배포로 확인 불가</li>
+</ul>
+<hr />
+<h2 id="2026-03-19">수동 정리 기록 (2026-03-19)</h2>
+<h3 id="3-20260308-2026-03-19-1001-kst">3차. 20260308 폴더 수동 삭제 (2026-03-19 10:01 KST)</h3>
+<ul>
+<li>코드 수정은 아직 미배포 → 수동으로 정리 진행</li>
+<li>대상 폴더 수: <strong>10개</strong> (20260308)</li>
+<li>대상 용량: <strong>~1.3GB</strong></li>
+<li>디스크 사용률: 71% (68GB) → 70% (67GB)</li>
+<li>명령: <code>find ... -name "20260308" | xargs rm -rf</code></li>
+</ul>
+<hr />
+<h2 id="2026-03-20">📅 내일(2026-03-20) 자동 정리 검증 대상</h2>
+<blockquote>
+<p>⚠️ <strong>코드 배포 후 새벽 4시 자동 정리가 실행되면</strong> 아래 20260309 폴더가 삭제되어야 합니다.
+코드가 미배포되면 다시 수동 삭제 후 이 체크리스트를 갱신합니다.</p>
+</blockquote>
+<p><strong>삭제 대상 폴더 목록 (총 11개, 약 1.3GB)</strong>
+| Workspace | Project | Folder | Size |
+|---|---|---|---|
+| <code>1111...</code> | <code>37703364</code> | <code>20260309</code> | 8.6M |
+| <code>1111...</code> | <code>470f8afa</code> | <code>20260309</code> | 17M |
+| <code>1111...</code> | <code>57650074</code> | <code>20260309</code> | 5.9M |
+| <code>1111...</code> | <code>7803af8a</code> | <code>20260309</code> | 9.4M |
+| <code>1111...</code> | <code>89e5483e</code> | <code>20260309</code> | 18M |
+| <code>1111...</code> | <code>9ea1c9b0</code> | <code>20260309</code> | 9.6M |
+| <code>1111...</code> | <code>f7cad62f</code> | <code>20260309</code> | 9.2M |
+| <code>1111...</code> | <code>fa7aaf1d</code> | <code>20260309</code> | 4.9M |
+| <code>2222...</code> | <code>14143f81</code> | <code>20260309</code> | 5.3M |
+| <code>2222...</code> | <code>3c042a40</code> | <code>20260309</code> | 1.2G |
+| <code>2222...</code> | <code>e0b0a404</code> | <code>20260309</code> | 44M |</p>
+<ul>
+<li>[ ] 20일 오전, 위 11개 폴더가 자동 삭제되었는지 확인</li>
+<li>[ ] 백엔드 로그에서 <code>로그 정리 완료</code> 메시지 유무 확인</li>
+<li>[ ] 디스크 사용 변화 확인</li>
 </ul>
 
 

@@ -36,4 +36,28 @@
          <loc>https://angalle.github.io/vibe-crawler-handover/frontend/04-issues-and-history/</loc>
          <lastmod>2026-03-19</lastmod>
     </url>
+    <url>
+         <loc>https://angalle.github.io/vibe-crawler-handover/issues/bug-002-pid-zombie/</loc>
+         <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+         <loc>https://angalle.github.io/vibe-crawler-handover/issues/log-cleanup-checklist/</loc>
+         <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+         <loc>https://angalle.github.io/vibe-crawler-handover/issues/storage-analysis/</loc>
+         <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+         <loc>https://angalle.github.io/vibe-crawler-handover/issues/zombie-container-disk/</loc>
+         <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+         <loc>https://angalle.github.io/vibe-crawler-handover/plans/server-scaling/</loc>
+         <lastmod>2026-03-19</lastmod>
+    </url>
+    <url>
+         <loc>https://angalle.github.io/vibe-crawler-handover/plans/workspace-migration/</loc>
+         <lastmod>2026-03-19</lastmod>
+    </url>
 </urlset>
