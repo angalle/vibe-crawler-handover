@@ -1,0 +1,53 @@
+site_name: Vibe Crawling Platform - 인수인계 문서
+site_description: Vibe Crawling Platform 백엔드/프론트엔드 인수인계 문서
+site_url: https://angalle.github.io/vibe-crawler-handover/
+repo_url: https://github.com/angalle/vibe-crawler-handover
+
+theme:
+  name: material
+  language: ko
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Backend:
+    - 프로젝트 개요: backend/01-project-overview.md
+    - 아키텍처 및 설계: backend/02-architecture-and-design.md
+    - 운영 가이드: backend/03-operations-guide.md
+    - 이슈 및 히스토리: backend/04-issues-and-history.md
+  - Frontend:
+    - 프로젝트 개요: frontend/01-project-overview.md
+    - 아키텍처 및 설계: frontend/02-architecture-and-design.md
+    - 운영 가이드: frontend/03-operations-guide.md
+    - 이슈 및 히스토리: frontend/04-issues-and-history.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
