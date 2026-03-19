@@ -1357,7 +1357,7 @@
 <hr />
 <h2 id="1">1. 헥사고날 아키텍처</h2>
 <p>모든 도메인은 <strong>Ports &amp; Adapters (Hexagonal) Architecture</strong>를 따릅니다.</p>
-<pre class="mermaid"><code>graph LR
+<pre class="mermaid"><code>graph TD
     subgraph Driving["Driving (Input)"]
         A[FastAPI Router]
         B[APScheduler]
@@ -1403,7 +1403,9 @@
 
     SCHED[scheduler] -.-&gt; CRAWL
     STORAGE[storage] -.-&gt; CRAWL
+    STORAGE -.-&gt; SCRIPT
     WORKFLOW[workflow] -.-&gt; AIFIX
+    WORKFLOW -.-&gt; ENHANCE
     ADMIN[admin] -.-&gt; WS
     SHARED[shared] -.-&gt; WS
     SHARED -.-&gt; SCHED
@@ -1414,7 +1416,10 @@
     style JOB fill:#4051B5,color:#fff
     style CRAWL fill:#e53935,color:#fff
     style AIFIX fill:#FB8C00,color:#fff
+    style ENHANCE fill:#FB8C00,color:#fff
+    style SCRIPT fill:#1565C0,color:#fff
     style SCHED fill:#43A047,color:#fff
+    style STORAGE fill:#43A047,color:#fff
     style WORKFLOW fill:#8E24AA,color:#fff</code></pre>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>backend/
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── workspace/                       # 워크스페이스 도메인
