@@ -6,6 +6,34 @@
 
 모든 도메인은 **Ports & Adapters (Hexagonal) Architecture**를 따릅니다.
 
+```mermaid
+graph LR
+    subgraph Driving["Driving (Input)"]
+        A[FastAPI Router]
+        B[APScheduler]
+    end
+
+    subgraph Core["Application Core"]
+        C[Input Port - ABC]
+        D[Service - UseCase]
+        E[Output Port - ABC]
+    end
+
+    subgraph Driven["Driven (Output)"]
+        F[PostgreSQL]
+        G["External API (i-flow)"]
+        H[File System]
+    end
+
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    E --> H
+```
+
 ```
 {domain}/
 ├── adapter/input/controllers/    → Driving Adapter (FastAPI Router)
@@ -20,6 +48,32 @@
 ---
 
 ## 2. 도메인 구조
+
+```mermaid
+graph TD
+    WS[workspace] --> PROJ[project]
+    PROJ --> JOB[job]
+    JOB --> CRAWL[crawling]
+    JOB --> AIFIX["ai_auto_fix"]
+    JOB --> SCRIPT[scripts]
+    JOB --> ENHANCE["script_enhancement"]
+
+    SCHED[scheduler] -.-> CRAWL
+    STORAGE[storage] -.-> CRAWL
+    WORKFLOW[workflow] -.-> AIFIX
+    ADMIN[admin] -.-> WS
+    SHARED[shared] -.-> WS
+    SHARED -.-> SCHED
+    SHARED -.-> STORAGE
+
+    style WS fill:#4051B5,color:#fff
+    style PROJ fill:#4051B5,color:#fff
+    style JOB fill:#4051B5,color:#fff
+    style CRAWL fill:#e53935,color:#fff
+    style AIFIX fill:#FB8C00,color:#fff
+    style SCHED fill:#43A047,color:#fff
+    style WORKFLOW fill:#8E24AA,color:#fff
+```
 
 ```
 backend/
@@ -181,18 +235,45 @@ sequenceDiagram
 
 ### 6.2 AI Auto Fix
 
-```
-크롤링 실패 → AI Auto Fix 세션 생성 (PENDING)
-→ 실패 로그/스냅샷 기반 AI 분석 (ANALYZING)
-→ 스크립트 수정안 생성 (COMPLETED)
-→ (선택) 수정된 스크립트로 재실행 / 원본에 적용
+```mermaid
+flowchart LR
+    A["크롤링 실패"] --> B["AI Auto Fix 세션 생성<br/>(PENDING)"]
+    B --> C["실패 로그/스냅샷<br/>AI 분석 (ANALYZING)"]
+    C --> D["스크립트 수정안 생성<br/>(COMPLETED)"]
+    D --> E{"사용자 선택"}
+    E -->|재실행| F["수정 스크립트로 재실행"]
+    E -->|적용| G["원본 스크립트에 적용"]
+
+    style A fill:#e53935,color:#fff
+    style D fill:#43A047,color:#fff
 ```
 
 ### 6.3 상태 전이
 
-```
-Job:     IDLE → PENDING → RUNNING → COMPLETED / FAILED → (재스케줄)
-Session: PENDING → RUNNING → COMPLETED / FAILED
+```mermaid
+stateDiagram-v2
+    [*] --> IDLE : Job 생성
+
+    state Job {
+        IDLE --> PENDING : 스케줄 트리거
+        PENDING --> RUNNING : 세션 픽업
+        RUNNING --> COMPLETED : 성공
+        RUNNING --> FAILED : 실패
+        COMPLETED --> IDLE : 재스케줄
+        FAILED --> IDLE : 재스케줄
+    }
+
+    state Session {
+        state "PENDING" as SP
+        state "RUNNING" as SR
+        state "COMPLETED" as SC
+        state "FAILED" as SF
+
+        [*] --> SP
+        SP --> SR : 실행 시작
+        SR --> SC : 성공
+        SR --> SF : 실패
+    }
 ```
 
 ### 6.4 후처리 API (Incross i-flow)
