@@ -24,7 +24,6 @@ graph TD
     style CRAWL fill:#e53935,color:#fff
     style PG fill:#43A047,color:#fff
 ```
-```
 
 ### 1.2 현재 배치(스케줄러) 동작 방식
 
@@ -113,7 +112,6 @@ graph LR
     style Master fill:#1a237e,color:#fff
     style Worker fill:#b71c1c,color:#fff
 ```
-```
 
 - **장점**: 수평 확장 가능, Master 장애 시에도 실행 중인 크롤링은 계속
 - **단점**: 코드 변경 필요, 공유 스토리지 비용
@@ -140,7 +138,6 @@ graph TD
     style MA fill:#e53935,color:#fff
     style MB fill:#e53935,color:#fff
     style DB fill:#43A047,color:#fff
-```
 ```
 
 - **장점**: 고가용성(HA), 부하 분산
