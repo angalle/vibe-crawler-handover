@@ -29,7 +29,6 @@
 ```
 
 - Frontend 이미지는 **Nginx** 기반으로 빌드
-- AMD64 플랫폼 강제 빌드 (Mac ARM64 ↔ EC2 AMD64 호환)
 
 ### 2.2 EC2 배포
 

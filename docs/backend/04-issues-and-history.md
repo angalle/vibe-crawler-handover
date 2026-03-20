@@ -46,16 +46,12 @@
 - `workspaces` 테이블 + 모든 엔티티에 `workspace_id` FK
 - 사업자별 데이터 격리, API URL 워크스페이스 단위 관리
 
-### 3.8 AMD64 플랫폼 강제 빌드
-- Mac ARM64에서 빌드한 이미지가 EC2(AMD64)에서 동작 안 함
-- `--platform linux/amd64`로 강제 빌드
-
-### 3.9 워크스페이스 간 프로젝트 이관
+### 3.8 워크스페이스 간 프로젝트 이관
 - 이관 시 DB `workspace_id` + `name` 변경 + 파일시스템 `mv`
 - FK cascade로 jobs/sessions 등은 별도 수정 불필요
 - 실제 사례: MINDK → INCRO 8개 프로젝트 이관 (2026-03-17)
 
-### 3.10 고아 컨테이너 자동 정리
+### 3.9 고아 컨테이너 자동 정리
 - Docker Cleanup Service에 역방향 검사: `docker ps` → 세션 DB 확인 → 불일치 시 stop+rm
 - compose 외부 크롤러 컨테이너(`crawler-*`)도 정리 대상
 
