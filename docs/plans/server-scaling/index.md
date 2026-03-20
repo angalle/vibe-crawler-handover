@@ -56,4 +56,5 @@ graph TD
 
 - [방안 A: Scale-Up](01-scale-up.md) — 즉시 적용 가능한 스케일업
 - [방안 B: Worker 분리](02-worker-separation.md) — 권장 아키텍처 상세 설계
-- [AWS 인프라 및 실행 계획](04-infra-and-plan.md) — 리소스, 네트워크, 단계별 계획
+- [AWS 인프라 및 실행 계획](04-infra-and-plan.md) — AWS 기준 리소스, 네트워크, 단계별 계획
+- [KT Cloud 인프라 및 실행 계획](05-infra-ktcloud.md) — KT Cloud 기준 리소스, NAS, 방화벽
