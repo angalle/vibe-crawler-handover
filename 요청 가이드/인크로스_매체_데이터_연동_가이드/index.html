@@ -10,31 +10,27 @@
       
       
       
-        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/backend/operations/04-db-management/">
+        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%EC%9D%B8%ED%81%AC%EB%A1%9C%EC%8A%A4_%EB%A7%A4%EC%B2%B4_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%97%B0%EB%8F%99_%EA%B0%80%EC%9D%B4%EB%93%9C/">
       
       
-        <link rel="prev" href="../03-external-services/">
-      
-      
-        <link rel="next" href="../05-storage-planning/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>DB 관리 - Vibe Crawling Platform - 인수인계 문서</title>
+        <title>인크로스 매체 데이터 전송 및 프로젝트 연동 가이드 - Vibe Crawling Platform - 인수인계 문서</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +49,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#db" class="md-skip">
+        <a href="#_1" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -96,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="상단/헤더">
-    <a href="../../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-header__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
+    <a href="../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-header__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DB 관리
+              인크로스 매체 데이터 전송 및 프로젝트 연동 가이드
             
           </span>
         </div>
@@ -232,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-nav__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
+    <a href="../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-nav__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -286,20 +282,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -320,7 +316,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -338,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-project-overview/" class="md-nav__link">
+      <a href="../../backend/01-project-overview/" class="md-nav__link">
         
   
   
@@ -366,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-architecture-and-design/" class="md-nav__link">
+      <a href="../../backend/02-architecture-and-design/" class="md-nav__link">
         
   
   
@@ -391,20 +387,20 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -425,7 +421,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -443,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../backend/operations/" class="md-nav__link">
         
   
   
@@ -471,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-build-deploy/" class="md-nav__link">
+      <a href="../../backend/operations/01-build-deploy/" class="md-nav__link">
         
   
   
@@ -499,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-monitoring-logs/" class="md-nav__link">
+      <a href="../../backend/operations/02-monitoring-logs/" class="md-nav__link">
         
   
   
@@ -527,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-external-services/" class="md-nav__link">
+      <a href="../../backend/operations/03-external-services/" class="md-nav__link">
         
   
   
@@ -552,37 +548,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DB 관리
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../backend/operations/04-db-management/" class="md-nav__link">
         
   
   
@@ -598,48 +567,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="목차">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        마이그레이션
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        백업/복원
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -652,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-storage-planning/" class="md-nav__link">
+      <a href="../../backend/operations/05-storage-planning/" class="md-nav__link">
         
   
   
@@ -688,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-issues-and-history/" class="md-nav__link">
+      <a href="../../backend/04-issues-and-history/" class="md-nav__link">
         
   
   
@@ -772,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/01-project-overview/" class="md-nav__link">
+      <a href="../../frontend/01-project-overview/" class="md-nav__link">
         
   
   
@@ -800,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/02-architecture-and-design/" class="md-nav__link">
+      <a href="../../frontend/02-architecture-and-design/" class="md-nav__link">
         
   
   
@@ -828,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/03-operations-guide/" class="md-nav__link">
+      <a href="../../frontend/03-operations-guide/" class="md-nav__link">
         
   
   
@@ -856,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/04-issues-and-history/" class="md-nav__link">
+      <a href="../../frontend/04-issues-and-history/" class="md-nav__link">
         
   
   
@@ -989,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/" class="md-nav__link">
+      <a href="../../plans/server-scaling/" class="md-nav__link">
         
   
   
@@ -1017,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/01-scale-up/" class="md-nav__link">
+      <a href="../../plans/server-scaling/01-scale-up/" class="md-nav__link">
         
   
   
@@ -1045,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/02-worker-separation/" class="md-nav__link">
+      <a href="../../plans/server-scaling/02-worker-separation/" class="md-nav__link">
         
   
   
@@ -1073,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/03-ecs-fargate/" class="md-nav__link">
+      <a href="../../plans/server-scaling/03-ecs-fargate/" class="md-nav__link">
         
   
   
@@ -1101,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/04-infra-and-plan/" class="md-nav__link">
+      <a href="../../plans/server-scaling/04-infra-and-plan/" class="md-nav__link">
         
   
   
@@ -1129,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/05-infra-ktcloud/" class="md-nav__link">
+      <a href="../../plans/server-scaling/05-infra-ktcloud/" class="md-nav__link">
         
   
   
@@ -1221,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/bug-002-pid-zombie/" class="md-nav__link">
+      <a href="../../issues/bug-002-pid-zombie/" class="md-nav__link">
         
   
   
@@ -1249,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/log-cleanup-checklist/" class="md-nav__link">
+      <a href="../../issues/log-cleanup-checklist/" class="md-nav__link">
         
   
   
@@ -1277,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/storage-analysis/" class="md-nav__link">
+      <a href="../../issues/storage-analysis/" class="md-nav__link">
         
   
   
@@ -1305,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/zombie-container-disk/" class="md-nav__link">
+      <a href="../../issues/zombie-container-disk/" class="md-nav__link">
         
   
   
@@ -1389,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../estimates/ISS-003_%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%9B%8C%EC%BB%A4%EB%B6%84%EB%A6%AC/ISS-003_%EC%B5%9C%EC%A2%85%EA%B2%AC%EC%A0%81%EC%84%9C/" class="md-nav__link">
+      <a href="../../estimates/ISS-003_%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%9B%8C%EC%BB%A4%EB%B6%84%EB%A6%AC/ISS-003_%EC%B5%9C%EC%A2%85%EA%B2%AC%EC%A0%81%EC%84%9C/" class="md-nav__link">
         
   
   
@@ -1444,10 +1371,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        마이그레이션
+        1. 개요
       
     </span>
   </a>
@@ -1455,10 +1382,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        백업/복원
+        2. 데이터 매핑 로직
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 데이터 매핑 로직">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-source-of-truth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. 데이터 소스 (Source of Truth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. 전송 단계 바인딩 규칙
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 개발 및 운영 가이드
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 개발 및 운영 가이드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. 프로젝트 생성 시 주의사항
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. 백엔드 구현 참조
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 장애 대응 및 데이터 정정
       
     </span>
   </a>
@@ -1485,25 +1490,61 @@
   
 
 
-<h1 id="db">DB 관리</h1>
+<h1 id="_1">인크로스 매체 데이터 전송 및 프로젝트 연동 가이드</h1>
+<p>본 문서는 Vibe Crawling Platform에서 인크로스(Incross) 매체 데이터를 시스템 내부적으로 어떻게 관리하고, 1차 DataLake API로 전송할 때 어떠한 매핑 규칙을 사용하는지 설명하는 가이드입니다.</p>
 <hr />
-<h2 id="_1">마이그레이션</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 상태 확인</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>alembic<span class="w"> </span>-c<span class="w"> </span>shared/alembic/alembic.ini<span class="w"> </span>current
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 적용</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>alembic<span class="w"> </span>-c<span class="w"> </span>shared/alembic/alembic.ini<span class="w"> </span>upgrade<span class="w"> </span>head
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Docker</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-T<span class="w"> </span>backend<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>alembic<span class="w"> </span>-c<span class="w"> </span>/app/alembic.ini<span class="w"> </span>upgrade<span class="w"> </span>head
-</code></pre></div>
-<h2 id="_2">백업/복원</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 백업</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>db<span class="w"> </span>pg_dump<span class="w"> </span>-U<span class="w"> </span>vibe_user<span class="w"> </span>vibe_crawling_db<span class="w"> </span>&gt;<span class="w"> </span>backup_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span>.sql
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># 복원</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>cat<span class="w"> </span>backup.sql<span class="w"> </span><span class="p">|</span><span class="w"> </span>docker-compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-T<span class="w"> </span>db<span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span>vibe_user<span class="w"> </span>-d<span class="w"> </span>vibe_crawling_db
-</code></pre></div>
+<h2 id="1">1. 개요</h2>
+<p>인크로스 API 연동을 통해 수집된 데이터 중 <strong>매체(Media)</strong> 정보는 시스템 내부적으로 '카테고리(Category)' 테이블에서 통합 관리됩니다. 프로젝트 생성 시 선택하는 카테고리 값이 실제로는 해당 캠페인의 집행 매체 정보를 담고 있습니다.</p>
+<p>백엔드 시스템은 프로젝트에 설정된 매체 정보가 유실되지 않도록, 최종 데이터 전송 단계에서 카테고리 정보를 매체 정보로 자동 치환하여 전달합니다.</p>
+<hr />
+<h2 id="2">2. 데이터 매핑 로직</h2>
+<h3 id="21-source-of-truth">2.1. 데이터 소스 (Source of Truth)</h3>
+<p>시스템 내에서 매체 정보의 신뢰할 수 있는 단일 원천(Source of Truth)은 <strong>카테고리(Category)</strong> 데이터입니다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>시스템 필드 (Internal)</th>
+<th>외부 전송 필드 (DataLake API)</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>매체 ID</strong></td>
+<td><code>category_code</code></td>
+<td><code>mediaid</code></td>
+<td>실제 인크로스 매체 고유 코드</td>
+</tr>
+<tr>
+<td><strong>매체 명</strong></td>
+<td><code>category_name</code></td>
+<td><code>medianame</code></td>
+<td>매체 서비스 명칭 (예: Google, DA 등)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2. 전송 단계 바인딩 규칙</h3>
+<p>크롤링 작업 완료 후 1차 DataLake API로 메타데이터를 전송할 때 다음과 같은 우선순위로 매체 정보를 조립합니다.</p>
+<ol>
+<li><strong>카테고리 정보 우선 참조</strong>: 프로젝트에 연결된 카테고리의 <code>category_code</code>가 존재할 경우, 이를 <code>mediaid</code>로 사용합니다.</li>
+<li><strong>프로젝트 필드 보완</strong>: UI상의 제약(캠페인 수동 입력 등)으로 프로젝트 테이블(<code>projects</code>)의 미디어 필드가 비어있더라도, 카테고리가 선택되어 있다면 백엔드 아키텍처 수준(Repository Join)에서 이를 찾아내어 자동으로 바인딩합니다.</li>
+</ol>
+<hr />
+<h2 id="3">3. 개발 및 운영 가이드</h2>
+<h3 id="31">3.1. 프로젝트 생성 시 주의사항</h3>
+<p>현재 UI 구조상 캠페인 정보를 수동으로 입력하더라도, <strong>카테고리(매체) 항목은 반드시 올바르게 선택</strong>해야 합니다. 
+- 카테고리 선택 시 백엔드에서 해당 카테고리에 매핑된 실제 인크로스 매체 식별자를 찾아 전송하기 때문입니다.
+- 카테고리를 잘못 선택할 경우, 1차 API 전송 시 엉뚱한 <code>mediaid</code>가 전달되어 집계 데이터 오염의 원인이 됩니다.</p>
+<h3 id="32">3.2. 백엔드 구현 참조</h3>
+<p>매체 정보 바인딩 로직은 다음 구성 요소를 통해 구현되어 있습니다.
+- <strong>Repository</strong>: <code>ProjectRepositoryAdapter</code>에서 조회 시 <code>CategoryModel</code>을 항상 Outer Join하여 매체 코드를 로드.
+- <strong>Service</strong>: <code>start_crawling_service.py</code> 내 <code>project_meta_binding</code> 로직에서 카테고리 코드를 <code>mediaid</code>로 직결 매핑.</p>
+<hr />
+<h2 id="4">4. 장애 대응 및 데이터 정정</h2>
+<p>만약 특정 프로젝트의 매체 정보가 <code>NULL</code>로 전송되거나 잘못된 매체로 집계되고 있다면 다음 사항을 점검하십시오.
+1. 해당 프로젝트의 <code>category_id</code>가 올바른 매체 카테고리를 가리키고 있는지 확인.
+2. <code>categories</code> 테이블의 <code>category_code</code> 필드값이 실제 인크로스 매체 코드와 일치하는지 확인.</p>
 
 
 
@@ -1559,10 +1600,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
