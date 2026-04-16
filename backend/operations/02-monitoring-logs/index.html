@@ -562,7 +562,46 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 운영 컨테이너 로그 확인
+        1. 운영 컨테이너 로그 모니터링
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 운영 컨테이너 로그 모니터링">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        백엔드 (Backend) 로그
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        프론트엔드 (Frontend) 로그
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 크롤링 결과물 및 파일 로그 구조
       
     </span>
   </a>
@@ -570,43 +609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-workspace" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 크롤링 로그 파일 구조 (Workspace 기반)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-docker-dood" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 크롤러 Docker 컨테이너 특징 (DooD 환경)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-runners" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 백그라운드 스케줄러 (Runners) 구성
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 장애 대응 및 복구 매뉴얼 (Troubleshooting)
+        3. 기본 장애 대응 및 복구 조치
       
     </span>
   </a>
@@ -1480,7 +1486,46 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 운영 컨테이너 로그 확인
+        1. 운영 컨테이너 로그 모니터링
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 운영 컨테이너 로그 모니터링">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        백엔드 (Backend) 로그
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        프론트엔드 (Frontend) 로그
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 크롤링 결과물 및 파일 로그 구조
       
     </span>
   </a>
@@ -1488,43 +1533,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-workspace" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 크롤링 로그 파일 구조 (Workspace 기반)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-docker-dood" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 크롤러 Docker 컨테이너 특징 (DooD 환경)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-runners" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 백그라운드 스케줄러 (Runners) 구성
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 장애 대응 및 복구 매뉴얼 (Troubleshooting)
+        3. 기본 장애 대응 및 복구 조치
       
     </span>
   </a>
@@ -1551,122 +1563,54 @@
   
 
 
-<h1 id="_1">모니터링 및 로그</h1>
+<h1 id="_1">시스템 모니터링 및 로그</h1>
 <hr />
-<h2 id="1">1. 운영 컨테이너 로그 확인</h2>
-<p><code>docker-compose.prod.yml</code> 기반으로 구동된 컨테이너의 실시간 로그를 확인합니다. 서버에 SSH 접속 후 배포 폴더에서 실행합니다.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 인프라 환경 폴더로 이동 (예시 경로)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>infrastructure/docker
+<p>운영 중인 시스템의 상태를 확인하고 장애 발생 시 로그를 추적하는 표준 방법론입니다.</p>
+<h2 id="1">1. 운영 컨테이너 로그 모니터링</h2>
+<p><code>docker-compose.yml</code>이 존재하는 동일한 디렉토리에서 각 서비스의 실시간 화면 출력(STDOUT) 로그를 추적할 수 있습니다.</p>
+<h3 id="backend">백엔드 (Backend) 로그</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 실시간 백엔드 로그 꼬리물기 (-f 옵션)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>backend
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 백엔드 실시간 로그 꼬리물기 모니터링 (-f 플래그 활용)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>backend
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># 에러(ERROR) 로그만 필터링하여 추적</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>backend<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 에러 로그만 필터링하여 확인 (장애 상황 시)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>backend<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;error&quot;</span>
+</code></pre></div>
+<h3 id="frontend">프론트엔드 (Frontend) 로그</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 실시간 프론트엔드 로그 (접속 불량, 렌더링 에러 확인 시)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>frontend
 </code></pre></div>
 <hr />
-<h2 id="2-workspace">2. 크롤링 로그 파일 구조 (Workspace 기반)</h2>
-<p>서버(호스트)의 <code>system_storage/</code> 디렉토리에 백엔드 로그와 세션별 결과물이 지속적으로 보관됩니다. (Volume Mount 구성 기반)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>system_storage/
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── workspaces/
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   └── {workspace_id}/
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│       └── projects/
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│           └── {project_id}/
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│               ├── scripts/             # 크롤링 스크립트 원본
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│               ├── mdc/                 # 매체 데이터 원본 파일
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│               └── sessions/
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│                   └── {YYYYMMDD}/
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│                       └── {session_id}/
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│                           ├── action_snapshots/  # 액션별 PNG 스크린샷 
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│                           ├── videos/            # webm 녹화 파일 (디버깅용)
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│                           ├── downloads/         # 수집 결과 데이터 (CSV 등)
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│                           ├── crawling_result.json
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│                           └── logs/              # 스크립트 실행 기록 로그
+<h2 id="2">2. 크롤링 결과물 및 파일 로그 구조</h2>
+<p>백엔드 컨테이너의 핵심 데이터(수집 결과물, 영상, 스크린샷, 세부 디버그 로그)는 영구 보존을 위해 <code>docker-compose.yml</code> 의 볼륨 바인딩 설정에 따라 호스트 마상의 <code>system_storage/</code> 에 지속적으로 저장됩니다.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>system_storage/
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>└── workspaces/
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    └── {workspace_id}/
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        └── projects/
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            └── {project_id}/
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                ├── scripts/             # 크롤러 엔진 스크립트
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                └── sessions/
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                    └── {YYYYMMDD}/
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                        └── {session_id}/
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>                            ├── action_snapshots/  # 단계별 스크린샷 (디버깅용)
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>                            ├── videos/            # 화면 녹화 파일 (디버깅용)
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                            ├── downloads/         # 수집 결과물 (CSV 엑셀 파일 등)
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>                            ├── crawling_result.json # 세션 최종 요약본
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                            └── logs/              # 크롤러 인스턴스 전용 상세 로그 
 </code></pre></div>
+<blockquote>
+<p><strong>Tip:</strong> 화면상에 <code>FAILED</code> 로 처리된 특정 크롤링 세션의 상세한 실패 사유("결과 테이블 로딩 대기 30초 초과" 등)를 파악하고자 할 때는, <code>docker compose logs backend</code> 보다 직접 파일 시스템에 저장된 위 <code>logs/</code> 디렉토리 속 텍스트 파일을 조회하는 것이 가장 정확합니다.</p>
+</blockquote>
 <hr />
-<h2 id="3-docker-dood">3. 크롤러 Docker 컨테이너 특징 (DooD 환경)</h2>
-<p>실제 크롤링 실행 시, 백엔드 컨테이너가 호스트의 도커 소켓(<code>/var/run/docker.sock</code>)을 조종하여 독립된 격리 도커 컨테이너를 단발성으로 생성하고 지웁니다.</p>
-<table>
-<thead>
-<tr>
-<th>항목</th>
-<th>상세 내용</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>컨테이너 명명</td>
-<td><code>crawler-{session_id}</code> (임시 컨테이너)</td>
-</tr>
-<tr>
-<td>실행 경로</td>
-<td>DooD (Docker-out-of-Docker) 형제 컨테이너 모드</td>
-</tr>
-<tr>
-<td>브라우저 엔진</td>
-<td>Playwright 내장 Chromium 브라우저</td>
-</tr>
-<tr>
-<td>종료 방식</td>
-<td>작업 완료 즉시 <code>docker rm -f</code> 로 강제 삭제 (데드락/좀비 방지)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="4-runners">4. 백그라운드 스케줄러 (Runners) 구성</h2>
-<p>백엔드 서버 구동 시, 내부적으로 APScheduler 기반의 스케줄러들이 백그라운드에서 동작합니다.</p>
-<table>
-<thead>
-<tr>
-<th>Runner 명칭</th>
-<th>주기</th>
-<th>담당 업무 (Description)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>scheduled_job_runner</code></td>
-<td>Cron 기반</td>
-<td>설정된 주기(Cron)에 따라 프로젝트를 탐색하고 세션(Session) 추가</td>
-</tr>
-<tr>
-<td><code>pending_sessions_runner</code></td>
-<td>15초</td>
-<td>대기중(PENDING) 세션 픽업 후 크롤러(Runner) 에게 실행 명령 하달</td>
-</tr>
-<tr>
-<td><code>pending_jobs_runner</code></td>
-<td>15초</td>
-<td>놓친 스케줄 누락본 캐치업 (재시도)</td>
-</tr>
-<tr>
-<td><code>sync_job_status_runner</code></td>
-<td>30초</td>
-<td>실행 중인 세션/Job 상태 강제 동기화 (비정상 종료, 좀비 프로세스 감지)</td>
-</tr>
-<tr>
-<td><code>cleanup_old_logs_runner</code></td>
-<td>매일 04:00 (KST)</td>
-<td><code>log_retention_days</code> 를 초과한 오래된 로그 및 Snapshot 파기</td>
-</tr>
-<tr>
-<td><code>recover_zombie_jobs_runner</code></td>
-<td>서버 시작 10초 후 1회</td>
-<td>프로세스 강제 재부팅 시 RUNNING 중이던 비정상 Job 일괄 복구</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="5-troubleshooting">5. 장애 대응 및 복구 매뉴얼 (Troubleshooting)</h2>
-<p>시스템 이상 감지 및 프론트엔드 플랫폼 화면에 <code>FAILED</code> 가 지속될 경우 다음과 같이 조치합니다.</p>
+<h2 id="3">3. 기본 장애 대응 및 복구 조치</h2>
 <ol>
-<li><strong>상세 로그 분석</strong>: <code>/api/v1/jobs/.../logs</code> 조회 확인, 또는 <code>docker compose logs -f backend</code> 추적</li>
-<li><strong>원인 유형 파악</strong>: 네트워크 시간초과(Timeout), 타겟 HTML 구조 변경 등에 의한 파싱 에러 여부 확인</li>
-<li><strong>핫픽스 적용 (Optional)</strong>: HTML 구조가 심하게 변상된 경우, <code>crawler_core</code> 스크립트를 로컬 백엔드 레파지토리에 수정 반영하여 재기동 전제 구성</li>
-<li><strong>서비스 리부팅 (강제 복구)</strong>:
-   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 강제 다운 후 웜-부트 재시작</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>down
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>-d
+<li><strong>로그 추적:</strong> 시스템 전체에 장애가 있는지 판단하려면 <code>docker compose logs -f backend</code>를 확인합니다. 특정 세션에만 에러가 났다면 <code>system_storage/</code> 의 해당 세션 로그 파일을 조회합니디.</li>
+<li><strong>단순 컨테이너 재시작:</strong> 서비스 메모리 누수나 일시적 뻗음 현상이 의심될 때
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>restart<span class="w"> </span>backend
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>restart<span class="w"> </span>frontend
+</code></pre></div></li>
+<li><strong>완전 재기동 (Cold Reboot):</strong> 기존 네트워크나 볼륨 의존성이 꼬였을 때 사용하는 최후의 수단입니다.
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div></li>
 </ol>
 
