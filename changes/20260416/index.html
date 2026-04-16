@@ -10,31 +10,27 @@
       
       
       
-        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/backend/operations/04-db-management/">
+        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/changes/20260416/">
       
       
-        <link rel="prev" href="../03-external-services/">
-      
-      
-        <link rel="next" href="../05-storage-planning/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>DB 관리 - Vibe Crawling Platform - 인수인계 문서</title>
+        <title>📦 배포 내역 — 2026.04.16 - Vibe Crawling Platform - 인수인계 문서</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +49,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#db" class="md-skip">
+        <a href="#20260416" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -96,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="상단/헤더">
-    <a href="../../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-header__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
+    <a href="../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-header__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DB 관리
+              📦 배포 내역 — 2026.04.16
             
           </span>
         </div>
@@ -232,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-nav__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
+    <a href="../.." title="Vibe Crawling Platform - 인수인계 문서" class="md-nav__button md-logo" aria-label="Vibe Crawling Platform - 인수인계 문서" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -286,20 +282,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -320,7 +316,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -338,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-project-overview/" class="md-nav__link">
+      <a href="../../backend/01-project-overview/" class="md-nav__link">
         
   
   
@@ -366,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-architecture-and-design/" class="md-nav__link">
+      <a href="../../backend/02-architecture-and-design/" class="md-nav__link">
         
   
   
@@ -391,20 +387,20 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -425,7 +421,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -443,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../backend/operations/" class="md-nav__link">
         
   
   
@@ -471,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-build-deploy/" class="md-nav__link">
+      <a href="../../backend/operations/01-build-deploy/" class="md-nav__link">
         
   
   
@@ -499,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-monitoring-logs/" class="md-nav__link">
+      <a href="../../backend/operations/02-monitoring-logs/" class="md-nav__link">
         
   
   
@@ -527,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-external-services/" class="md-nav__link">
+      <a href="../../backend/operations/03-external-services/" class="md-nav__link">
         
   
   
@@ -552,37 +548,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DB 관리
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../backend/operations/04-db-management/" class="md-nav__link">
         
   
   
@@ -598,104 +567,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="목차">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-alembic" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 데이터베이스 마이그레이션 전략 (Alembic)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 데이터베이스 마이그레이션 전략 (Alembic)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        방법 A: 마이그레이션 전용 컨테이너 실행
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        방법 B: 직접 SQL 쿼리 적용 (추천)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 데이터베이스 백업 및 복구
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 데이터베이스 백업 및 복구">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 데이터베이스 백업
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 데이터베이스 복원
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -708,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-storage-planning/" class="md-nav__link">
+      <a href="../../backend/operations/05-storage-planning/" class="md-nav__link">
         
   
   
@@ -744,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-issues-and-history/" class="md-nav__link">
+      <a href="../../backend/04-issues-and-history/" class="md-nav__link">
         
   
   
@@ -828,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/01-project-overview/" class="md-nav__link">
+      <a href="../../frontend/01-project-overview/" class="md-nav__link">
         
   
   
@@ -856,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/02-architecture-and-design/" class="md-nav__link">
+      <a href="../../frontend/02-architecture-and-design/" class="md-nav__link">
         
   
   
@@ -884,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/03-operations-guide/" class="md-nav__link">
+      <a href="../../frontend/03-operations-guide/" class="md-nav__link">
         
   
   
@@ -912,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/04-issues-and-history/" class="md-nav__link">
+      <a href="../../frontend/04-issues-and-history/" class="md-nav__link">
         
   
   
@@ -1045,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/" class="md-nav__link">
+      <a href="../../plans/server-scaling/" class="md-nav__link">
         
   
   
@@ -1073,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/01-scale-up/" class="md-nav__link">
+      <a href="../../plans/server-scaling/01-scale-up/" class="md-nav__link">
         
   
   
@@ -1101,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/02-worker-separation/" class="md-nav__link">
+      <a href="../../plans/server-scaling/02-worker-separation/" class="md-nav__link">
         
   
   
@@ -1129,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/03-ecs-fargate/" class="md-nav__link">
+      <a href="../../plans/server-scaling/03-ecs-fargate/" class="md-nav__link">
         
   
   
@@ -1157,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/04-infra-and-plan/" class="md-nav__link">
+      <a href="../../plans/server-scaling/04-infra-and-plan/" class="md-nav__link">
         
   
   
@@ -1185,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../plans/server-scaling/05-infra-ktcloud/" class="md-nav__link">
+      <a href="../../plans/server-scaling/05-infra-ktcloud/" class="md-nav__link">
         
   
   
@@ -1277,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/bug-002-pid-zombie/" class="md-nav__link">
+      <a href="../../issues/bug-002-pid-zombie/" class="md-nav__link">
         
   
   
@@ -1305,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/log-cleanup-checklist/" class="md-nav__link">
+      <a href="../../issues/log-cleanup-checklist/" class="md-nav__link">
         
   
   
@@ -1333,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/storage-analysis/" class="md-nav__link">
+      <a href="../../issues/storage-analysis/" class="md-nav__link">
         
   
   
@@ -1361,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../issues/zombie-container-disk/" class="md-nav__link">
+      <a href="../../issues/zombie-container-disk/" class="md-nav__link">
         
   
   
@@ -1445,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%EB%8F%84%EC%BB%A4%EC%BB%B4%ED%8F%AC%EC%A6%88_%EA%B8%B0%EB%B0%98_%EC%9A%B4%EC%98%81_%EB%B0%B0%ED%8F%AC_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
+      <a href="../../%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%EB%8F%84%EC%BB%A4%EC%BB%B4%ED%8F%AC%EC%A6%88_%EA%B8%B0%EB%B0%98_%EC%9A%B4%EC%98%81_%EB%B0%B0%ED%8F%AC_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
         
   
   
@@ -1500,33 +1371,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-alembic" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 데이터베이스 마이그레이션 전략 (Alembic)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 데이터베이스 마이그레이션 전략 (Alembic)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        방법 A: 마이그레이션 전용 컨테이너 실행
+        변경 요약
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#b-sql" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        방법 B: 직접 SQL 쿼리 적용 (추천)
+        수정 파일
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="수정 파일">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
       
     </span>
   </a>
@@ -1539,41 +1410,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#db" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 데이터베이스 백업 및 복구
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 데이터베이스 백업 및 복구">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 데이터베이스 백업
+        DB 스키마 (변경사항 없음)
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 데이터베이스 복원
+        운영 이슈 주의사항 (발생 시에만)
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1597,33 +1451,56 @@
   
 
 
-<h1 id="db">DB 관리</h1>
-<hr />
-<h2 id="1-alembic">1. 데이터베이스 마이그레이션 전략 (Alembic)</h2>
-<p>운영 DB는 기본적으로 분리된 외부망(RDS 등) 연결을 전제로 구성됩니다. 신규 기능 배포 시 스키마가 변경되었다면 다음 두 가지 방법 중 하나를 선택하여 진행할 수 있습니다.</p>
-<h3 id="a">방법 A: 마이그레이션 전용 컨테이너 실행</h3>
-<p>운영 서버의 Docker 환경에서 1회성 마이그레이션 컨테이너를 직접 가동하여 스키마를 최신 상태로 업데이트하는 방법입니다.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 인프라 환경 폴더 이동 후 마이그레이션 컨테이너 1회 구동</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>migration
-</code></pre></div></p>
-<h3 id="b-sql">방법 B: 직접 SQL 쿼리 적용 (추천)</h3>
-<p>외부 DB에 도커 컨테이너가 직접 접근하기 어려운 엄격한 망분리 환경이라면, <strong>개발팀(담당자)에게 배포용 마이그레이션 SQL 스크립트 파일을 따로 요청</strong>하시면 됩니다. 전달받은 SQL 파일을 직접 DB 관리 툴로 실행하여 스키마를 안전하게 업데이트할 수 있습니다.</p>
-<hr />
-<h2 id="2">2. 데이터베이스 백업 및 복구</h2>
-<p>운영 중인 DB 서버에 연결하여 데이터를 직접 덤프(백업)하거나 복원할 수 있습니다. 
-아래 절차는 PostgreSQL 을 기준으로, 운영 서버(또는 외부 관리형 DB와 연결된 컨테이너)에서 수행하는 표준 방법입니다.</p>
-<h3 id="21">2.1 데이터베이스 백업</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 외부 DB를 사용할 경우, psql 클라이언트 툴을 사용해 직접 백업을 수행합니다.</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># pg_dump를 통해 백업할 경우의 예시</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pg_dump<span class="w"> </span>-U<span class="w"> </span>vibe_user<span class="w"> </span>-h<span class="w"> </span>&lt;DB_HOSTNAME&gt;<span class="w"> </span>-p<span class="w"> </span><span class="m">15432</span><span class="w"> </span>vibe_crawling_db<span class="w"> </span>&gt;<span class="w"> </span>backup_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span>.sql
-</code></pre></div>
-<h3 id="22">2.2 데이터베이스 복원</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 기존 백업된 SQL 덤프 파일을 DB에 밀어 넣습니다.</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>psql<span class="w"> </span>-U<span class="w"> </span>vibe_user<span class="w"> </span>-h<span class="w"> </span>&lt;DB_HOSTNAME&gt;<span class="w"> </span>-p<span class="w"> </span><span class="m">15432</span><span class="w"> </span>-d<span class="w"> </span>vibe_crawling_db<span class="w"> </span>&lt;<span class="w"> </span>backup_20260416.sql
-</code></pre></div>
+<h1 id="20260416">📦 배포 내역 — 2026.04.16</h1>
 <blockquote>
-<p><strong>주의:</strong> 로컬 환경(<code>docker-compose.yml</code>)과 운영 환경(<code>docker-compose.prod.yml</code>)의 컨테이너 구성이 다르므로, 운영 배포 시에는 로컬 볼륨 마운트 DB가 아닌 설정된 <code>DATABASE_URL</code> 에 따라 외부 DB(RDS 등)에 직접 접근하여 DB를 관리하게 됩니다.</p>
+<p><strong>브랜치</strong>: <code>prod</code><br />
+<strong>배포 커밋</strong>: <code>ac80c9f5</code>, <code>d56edf4</code> (Backend), <code>a800767</code> (Docs-Site)</p>
 </blockquote>
+<hr />
+<h2 id="_1">변경 요약</h2>
+<ul>
+<li><strong>[아키텍처]</strong> 전역 환경 변수(<code>os.getenv</code>) 관리 방식을 타파하고, 전체 도메인 의존성에 대하여 <code>BaseSettings</code> 기반 중앙화 설계 전면 도입</li>
+<li><strong>[아키텍처]</strong> 하드코딩된 내부 통신망(Port: 8080) 구조 타파 및 환경 변수 기반 동적 바인딩(<code>API_BASE_URL</code>) 구조로 재설계하여 로컬 도커간 통신 장애 차단</li>
+<li><strong>[로직]</strong> 외부 복제에 의존하던 크롤링 엔진 코어(<code>crawler_core</code>) 스크립트 일체를 백엔드 자체 리소스로 내재화 (Hotfix 단일 진실 파이프라인 정립)</li>
+<li><strong>[인프라]</strong> Playwright 실행을 위한 <code>Dockerfile</code> 베이스 이미지(<code>bookworm</code>) 업그레이드 및 쉘 구동 환경 통합 지원</li>
+</ul>
+<h2 id="_2">수정 파일</h2>
+<h3 id="backend">Backend</h3>
+<ul>
+<li><strong>의존성 어댑터 전면 리팩토링 (<code>shared/config/base.py</code> 및 도메인 레벨 전반)</strong></li>
+<li><code>workflow/nodes/</code>(<code>llm</code>, <code>rag</code>, <code>vlm</code>, <code>mcp</code>, <code>python_scripter</code>), <code>admin/</code>, <code>logger</code> 내 파편화되어 존재하던 모든 <code>os.getenv</code> 코드를 전면 제거.</li>
+<li>전 도메인이 의존성 주입(DI)을 통해 <code>Settings</code> 의 중앙 집중식 설정을 사용하도록 아키텍처 수준의 대규모 리팩토링 진행.</li>
+<li><strong>크롤러 코어 내재화 신설 (<code>resources/crawler_core/</code> 전역)</strong></li>
+<li><code>script_crawler.py</code>, <code>screenshot_manager.py</code> 등 핵심 크롤러 구동기 파일 10여 개 신규 추가. 오프라인 복사(Scp 등) 배포 의존성을 걷어내고 백엔드를 '단일 진실 공급원'으로 승격.</li>
+<li><strong>스케줄러 모듈 및 어댑터 개선 (<code>workspace/project/job/crawling/</code> 및 <code>scheduler/</code>)</strong></li>
+<li><code>docker_crawler_adapter.py</code>, <code>local_crawler_adapter.py</code>: 실행 직전 내재화된 <code>crawler_core</code>를 강제 핫픽스로 주입하도록 어댑터 동작 매커니즘 고도화.</li>
+<li><code>crawling_executor_adapter.py</code>: API 통신 포트를 고정(8080)하지 않고 명시된 <code>API_BASE_URL</code> 로 유연하게 호출하도록 변경 (로컬/운영 네트워크 단절 에러 해결)</li>
+<li><code>crawler_path_service.py</code>, <code>file_system_adapter.py</code>: 파일 조작 및 저장소 시스템 포트 연동 고도화.</li>
+<li><strong>인프라 의존성 업그레이드 (<code>Dockerfile</code> 및 <code>prod.py</code>)</strong></li>
+<li>데비안 의존성 문제로 뻗는 Playwright 설치 시스템(<code>playwright install-deps</code>)을 완벽 호환시키기 위해 베이스 이미지를 <code>python:3.11-slim-bookworm</code> 으로 교체.</li>
+<li><code>INCROSS_API_BASE_URL</code> 맵핑 업데이트 및 <code>io</code> 패키지 등 빌드 의존성 추가.</li>
+</ul>
+<h2 id="db">DB 스키마 (변경사항 없음)</h2>
+<table>
+<thead>
+<tr>
+<th>컬럼</th>
+<th>타입</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>내용 없음</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">운영 이슈 주의사항 (발생 시에만)</h2>
+<ul>
+<li>스케줄러 내의 크롤러 단 건 실행(<code>test_stop_crawling_session.py</code> 등) 유닛 테스트 시, 외부의 <code>uvicorn</code> 포트가 <code>6767</code> 등 다르게 구동되어 있다면 환경 변수에 명시적으로 <code>API_BASE_URL=http://localhost:6767</code> 을 세팅해주어야 <code>Connection Refused</code> 에러를 방지할 수 있습니다. 운영 환경에서는 Docker Compose 단에서 알아서 <code>http://backend:8080</code> 폴백 경로로 통신하므로 안전하게 제어됩니다.</li>
+</ul>
 
 
 
@@ -1679,10 +1556,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
