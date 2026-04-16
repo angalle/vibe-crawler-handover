@@ -1565,12 +1565,12 @@
             MASTER["Master VM&lt;br/&gt;포트포워딩: 80,443,8080(외부)&lt;br/&gt;5432(내부만)"]
         end
         subgraph PRIV["Private Tier"]
-            WORKER["Worker VM-1&lt;br/&gt;방화벽: 6767(Master만)"]
+            WORKER["Worker VM-1&lt;br/&gt;방화벽: 8080(Master만)"]
         end
         NAS["NAS 볼륨&lt;br/&gt;NFS 마운트 (Zone 내부)"]
     end
 
-    MASTER &lt;--&gt;|6767| WORKER
+    MASTER &lt;--&gt;|8080| WORKER
     MASTER &lt;--&gt;|NFS| NAS
     WORKER &lt;--&gt;|NFS| NAS</code></pre>
 <h3 id="aws-vs-kt-cloud">AWS vs KT Cloud 네트워크 매핑</h3>

@@ -37,12 +37,12 @@ graph TD
             MASTER["Master VM<br/>포트포워딩: 80,443,8080(외부)<br/>5432(내부만)"]
         end
         subgraph PRIV["Private Tier"]
-            WORKER["Worker VM-1<br/>방화벽: 6767(Master만)"]
+            WORKER["Worker VM-1<br/>방화벽: 8080(Master만)"]
         end
         NAS["NAS 볼륨<br/>NFS 마운트 (Zone 내부)"]
     end
 
-    MASTER <-->|6767| WORKER
+    MASTER <-->|8080| WORKER
     MASTER <-->|NFS| NAS
     WORKER <-->|NFS| NAS
 ```

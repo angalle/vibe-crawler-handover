@@ -49,7 +49,7 @@
 ## 3. Nginx 설정
 
 - Vue SPA의 `index.html`로 모든 경로 폴백 (SPA 라우팅)
-- 백엔드 API 프록시: `/api/*` → `vibe-crawler-backend:6767`
+- 백엔드 API 프록시: `/api/*` → `vibe-crawler-backend:8080`
 
 ---
 

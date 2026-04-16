@@ -31,12 +31,12 @@ graph TD
             MASTER["Master EC2<br/>SG: 80,443,8080(외부)<br/>5432(Private만)"]
         end
         subgraph PRIV["Private Subnet (10.0.2.0/24)"]
-            WORKER["Worker EC2-1<br/>SG: 6767(Master만)"]
+            WORKER["Worker EC2-1<br/>SG: 8080(Master만)"]
         end
         EFS["EFS Mount Target<br/>SG: 2049(NFS, VPC 내부)"]
     end
 
-    MASTER <-->|6767| WORKER
+    MASTER <-->|8080| WORKER
     MASTER <-->|2049| EFS
     WORKER <-->|2049| EFS
 

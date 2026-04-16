@@ -11,7 +11,7 @@ cd ~/vibe-deployment
 docker-compose logs -f backend
 
 # 로컬 환경
-uvicorn shared.main:app --host 0.0.0.0 --port 6767 --reload
+uvicorn shared.main:app --host 0.0.0.0 --port 8080 --reload
 ```
 
 ## 크롤링 로그 파일 구조 (Workspace 기반)

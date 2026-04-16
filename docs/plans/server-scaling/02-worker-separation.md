@@ -104,7 +104,7 @@ async def acquire_session_lock(self, session_id: UUID, worker_id: str) -> bool:
 # crawling_executor_adapter.py 수정
 class CrawlingExecutorAdapter(CrawlingExecutorPort):
     async def execute_crawling(self, job_id: UUID, pending_session_id: str = None):
-        # 기존: localhost:6767 호출
+        # 기존: localhost:8080 호출
         # 변경: Worker 풀에서 가용 Worker 선택 후 호출
         worker_url = await self._select_available_worker()
         url = f"http://{worker_url}/api/v1/jobs/{str(job_id)}/execute"
@@ -128,7 +128,7 @@ services:
   backend:
     environment:
       ROLE: master        # 스케줄러 활성화
-      WORKER_URLS: "worker1:6767,worker2:6767"
+      WORKER_URLS: "worker1:8080,worker2:8080"
 
 # docker-compose.worker.yml — Worker 전용
 services:

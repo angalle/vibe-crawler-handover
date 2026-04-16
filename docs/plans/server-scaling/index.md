@@ -25,7 +25,7 @@ graph TD
 | 구성 요소 | 현재 방식 | 문제점 |
 |---|---|---|
 | **스케줄러** | APScheduler (인메모리, 단일 프로세스) | 서버 2대 이상이면 **중복 실행** 발생 |
-| **PENDING 세션 픽업** | 15초 간격 폴링 → `localhost:6767` API 호출 | 자기 자신만 호출 가능, **타 서버로 분배 불가** |
+| **PENDING 세션 픽업** | 15초 간격 폴링 → `localhost:8080` API 호출 | 자기 자신만 호출 가능, **타 서버로 분배 불가** |
 | **동시 실행 제한** | `max_concurrent_jobs` (DB 기반 카운트) | DB 레벨 카운트는 공유 가능하나, **슬롯 선점 경합** 있음 |
 | **Job 락** | `acquire_lock()` — SQL UPDATE WHERE status≠RUNNING | **DB 레벨 Atomic**이므로 멀티서버에서도 안전 ✅ |
 | **크롤러 실행** | Docker 형제 컨테이너 (`docker.sock` 마운트) | 해당 호스트의 Docker만 제어 가능 |

@@ -86,11 +86,11 @@ shared/config/
 alembic -c shared/alembic/alembic.ini upgrade head
 
 # 서버 실행
-uvicorn shared.main:app --host 0.0.0.0 --port 6767 --reload
+uvicorn shared.main:app --host 0.0.0.0 --port 8080 --reload
 ```
 
-- **API Docs**: http://localhost:6767/docs
-- **Health Check**: http://localhost:6767/health
+- **API Docs**: http://localhost:8080/docs
+- **Health Check**: http://localhost:8080/health
 
 ---
 
@@ -98,5 +98,5 @@ uvicorn shared.main:app --host 0.0.0.0 --port 6767 --reload
 
 | 서비스 | 로컬 | 운영(Docker) |
 |--------|:----:|:----:|
-| Backend API | 6767 | 8080 (→6767) |
+| Backend API | 8080 | 8080 (→8080) |
 | PostgreSQL | 5432 | 5432 |

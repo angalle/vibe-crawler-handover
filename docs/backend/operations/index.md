@@ -17,7 +17,7 @@
 |----------|--------|:----:|------|
 | `vibe-crawler-db` | `postgres:15-alpine` | 5432 | 메인 DB |
 | `vibe-crawler-migration` | `vibe-migration:latest` | - | Alembic 마이그레이션 (1회 실행) |
-| `vibe-crawler-backend` | `vibe-backend:latest` | 6767→8080 | API 서버 + 스케줄러 |
+| `vibe-crawler-backend` | `vibe-backend:latest` | 8080→8080 | API 서버 + 스케줄러 |
 
 ### AWS 정보
 

@@ -1766,11 +1766,11 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>alembic<span class="w"> </span>-c<span class="w"> </span>shared/alembic/alembic.ini<span class="w"> </span>upgrade<span class="w"> </span>head
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 서버 실행</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>uvicorn<span class="w"> </span>shared.main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">6767</span><span class="w"> </span>--reload
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>uvicorn<span class="w"> </span>shared.main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span><span class="w"> </span>--reload
 </code></pre></div>
 <ul>
-<li><strong>API Docs</strong>: http://localhost:6767/docs</li>
-<li><strong>Health Check</strong>: http://localhost:6767/health</li>
+<li><strong>API Docs</strong>: http://localhost:8080/docs</li>
+<li><strong>Health Check</strong>: http://localhost:8080/health</li>
 </ul>
 <hr />
 <h2 id="4">4. 서비스 포트</h2>
@@ -1785,8 +1785,8 @@
 <tbody>
 <tr>
 <td>Backend API</td>
-<td style="text-align: center;">6767</td>
-<td style="text-align: center;">8080 (→6767)</td>
+<td style="text-align: center;">8080</td>
+<td style="text-align: center;">8080 (→8080)</td>
 </tr>
 <tr>
 <td>PostgreSQL</td>

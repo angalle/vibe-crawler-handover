@@ -47,7 +47,7 @@ yarn install
 
 # 환경변수
 cp env.sample .env
-# VITE_API_BASE_URL=http://localhost:6767 설정
+# VITE_API_BASE_URL=http://localhost:8080 설정
 
 # 개발 서버 실행
 yarn dev
@@ -59,7 +59,7 @@ yarn dev
 
 | 변수 | 설명 | 기본값 |
 |------|------|--------|
-| `VITE_API_BASE_URL` | 백엔드 API 주소 | `http://localhost:6767` |
+| `VITE_API_BASE_URL` | 백엔드 API 주소 | `http://localhost:8080` |
 
 ---
 
