@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/frontend/02-architecture-and-design/">
+        <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%EB%8F%84%EC%BB%A4%EC%BB%B4%ED%8F%AC%EC%A6%88_%EA%B8%B0%EB%B0%98_%EC%9A%B4%EC%98%81_%EB%B0%B0%ED%8F%AC_%EA%B0%80%EC%9D%B4%EB%93%9C/">
       
       
-        <link rel="prev" href="../01-project-overview/">
+        <link rel="prev" href="../%EC%9D%B8%ED%81%AC%EB%A1%9C%EC%8A%A4_%EB%A7%A4%EC%B2%B4_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%97%B0%EB%8F%99_%EA%B0%80%EC%9D%B4%EB%93%9C/">
       
-      
-        <link rel="next" href="../03-operations-guide/">
       
       
         
@@ -27,7 +25,7 @@
     
     
       
-        <title>아키텍처 및 설계 - Vibe Crawling Platform - 인수인계 문서</title>
+        <title>운영 서버 배포 가이드 - Vibe Crawling Platform - 인수인계 문서</title>
       
     
     
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              아키텍처 및 설계
+              운영 서버 배포 가이드
             
           </span>
         </div>
@@ -651,20 +649,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -685,7 +683,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -703,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-project-overview/" class="md-nav__link">
+      <a href="../../frontend/01-project-overview/" class="md-nav__link">
         
   
   
@@ -728,37 +726,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    아키텍처 및 설계
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../frontend/02-architecture-and-design/" class="md-nav__link">
         
   
   
@@ -774,226 +745,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="목차">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 프로젝트 구조
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-atomic-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 아토믹 디자인 (Atomic Design)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 아토믹 디자인 (Atomic Design)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 계층 구조
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 의존성 규칙
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 새 컴포넌트 작성 기준
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-api-orval" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. API 코드 생성 (Orval)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. API 코드 생성 (Orval)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 동작 방식
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 주의사항
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 상태 관리
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 상태 관리">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-pinia-stores" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Pinia Stores (클라이언트 상태)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-tanstack-vue-query" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 TanStack Vue Query (서버 상태)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-composables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Composables (재사용 로직)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Features 디렉토리
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. 백엔드 API 연동
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. 백엔드 API 연동">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.1 주요 API 엔드포인트
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2 API 문서
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1006,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-operations-guide/" class="md-nav__link">
+      <a href="../../frontend/03-operations-guide/" class="md-nav__link">
         
   
   
@@ -1034,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-issues-and-history/" class="md-nav__link">
+      <a href="../../frontend/04-issues-and-history/" class="md-nav__link">
         
   
   
@@ -1515,20 +1266,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1549,7 +1300,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1567,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%ED%81%AC%EB%A1%A4%EB%A7%81_%EC%9E%AC%EC%88%98%EC%A7%91_API_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
+      <a href="../%ED%81%AC%EB%A1%A4%EB%A7%81_%EC%9E%AC%EC%88%98%EC%A7%91_API_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
         
   
   
@@ -1595,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%EC%9D%B8%ED%81%AC%EB%A1%9C%EC%8A%A4_%EB%A7%A4%EC%B2%B4_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%97%B0%EB%8F%99_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
+      <a href="../%EC%9D%B8%ED%81%AC%EB%A1%9C%EC%8A%A4_%EB%A7%A4%EC%B2%B4_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%97%B0%EB%8F%99_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
         
   
   
@@ -1620,10 +1371,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%EB%8F%84%EC%BB%A4%EC%BB%B4%ED%8F%AC%EC%A6%88_%EA%B8%B0%EB%B0%98_%EC%9A%B4%EC%98%81_%EB%B0%B0%ED%8F%AC_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    운영 서버 배포 가이드
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1639,6 +1417,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 아키텍처 개요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dood" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 도커 제어 핵심 설정 (DooD) 🚨
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-docker-composeprodyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 운영 배포 설정 파일 (docker-compose.prod.yml)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1681,7 +1512,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 프로젝트 구조
+        1. 아키텍처 개요
       
     </span>
   </a>
@@ -1689,149 +1520,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-atomic-design" class="md-nav__link">
+  <a href="#2-dood" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 아토믹 디자인 (Atomic Design)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 아토믹 디자인 (Atomic Design)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 계층 구조
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 의존성 규칙
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 새 컴포넌트 작성 기준
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-api-orval" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. API 코드 생성 (Orval)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. API 코드 생성 (Orval)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 동작 방식
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 주의사항
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 상태 관리
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 상태 관리">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-pinia-stores" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Pinia Stores (클라이언트 상태)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-tanstack-vue-query" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 TanStack Vue Query (서버 상태)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-composables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Composables (재사용 로직)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Features 디렉토리
+        2. 도커 제어 핵심 설정 (DooD) 🚨
       
     </span>
   </a>
@@ -1839,41 +1531,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-api" class="md-nav__link">
+  <a href="#3-docker-composeprodyml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 백엔드 API 연동
+        3. 운영 배포 설정 파일 (docker-compose.prod.yml)
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="6. 백엔드 API 연동">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.1 주요 API 엔드포인트
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2 API 문서
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1897,265 +1561,108 @@
   
 
 
-<h1 id="_1">프론트엔드 — 아키텍처 및 설계</h1>
+<h1 id="_1">도커 컴포즈 기반 운영 배포 가이드</h1>
+<p>본 문서는 <code>backend/</code>와 <code>frontend/</code> 하위의 독립적인 Dockerfile을 통해 이미지를 빌드하고, 이를 <code>docker-compose.prod.yml</code>을 이용하여 서버 환경에 배포하는 표준 프로세스를 설명합니다.</p>
+<p>특히 백엔드 컨테이너 내부에서 도커 명령어를 실행하기 위한 <strong>DooD (Docker-out-of-Docker)</strong> 설정에 대해 강조합니다.</p>
 <hr />
-<h2 id="1">1. 프로젝트 구조</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>frontend/src/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── api/              # Orval 자동 생성 API 훅 (직접 수정 금지)
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── api-config/       # API 클라이언트 설정 (axios instance 등)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── components/       # 아토믹 디자인 기반 UI 컴포넌트
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   ├── atoms/        #   → 최소 단위 (Button, Input, Badge, Spinner 등)
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   ├── molecules/    #   → atoms 조합 (FormField, FileUpload, StatusBadge 등)
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   ├── organisms/    #   → 복합 UI (EnhancedScriptsList 등)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   ├── templates/    #   → 페이지 레이아웃 (DashboardLayout, ListLayout 등)
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   └── pages/        #   → 라우트 매핑 페이지 컴포넌트
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── features/         # 도메인별 비즈니스 로직 모듈
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   ├── ai-auto-fix/  #   → AI 자동 수정 관련
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   ├── crawling/     #   → 크롤링 세션 관련
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   ├── dashboard/    #   → 대시보드 관련
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   ├── jobs/         #   → Job 관리 관련
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│   ├── projects/     #   → 프로젝트 관련
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│   └── ui/           #   → 공통 UI 유틸
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── composables/      # Vue 3 Composition API 재사용 로직
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── stores/           # Pinia 상태 관리
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├── router/           # Vue Router 라우팅
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├── utils/            # 유틸리티 함수
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├── views/            # 라우터 뷰 (pages로 위임)
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>└── assets/           # 정적 리소스
-</code></pre></div>
-<hr />
-<h2 id="2-atomic-design">2. 아토믹 디자인 (Atomic Design)</h2>
-<p>컴포넌트를 <strong>5단계 계층</strong>으로 분류합니다.</p>
-<h3 id="21">2.1 계층 구조</h3>
-<table>
-<thead>
-<tr>
-<th>계층</th>
-<th>역할</th>
-<th>예시</th>
-<th>규칙</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>atoms</strong></td>
-<td>최소 단위 HTML 래퍼</td>
-<td><code>Button</code>, <code>Input</code>, <code>Badge</code>, <code>Spinner</code>, <code>Switch</code>, <code>Checkbox</code>, <code>Icon</code></td>
-<td>자체 상태 없음, props로만 작동</td>
-</tr>
-<tr>
-<td><strong>molecules</strong></td>
-<td>atoms 조합 UI</td>
-<td><code>FormField</code>, <code>FileUploadField</code>, <code>CronScheduleField</code>, <code>SearchForm</code>, <code>Pagination</code>, <code>StatusBadge</code>, <code>DiffViewer</code></td>
-<td>atoms만 import, 로컬 상태만 가짐</td>
-</tr>
-<tr>
-<td><strong>organisms</strong></td>
-<td>비즈니스 로직 포함 UI</td>
-<td><code>EnhancedScriptsList</code>, <code>AIAutoFixActionsPanel</code></td>
-<td>API 호출/store 접근 가능</td>
-</tr>
-<tr>
-<td><strong>templates</strong></td>
-<td>페이지 레이아웃 껍데기</td>
-<td><code>DashboardLayout</code>, <code>ListLayout</code>, <code>DetailLayout</code></td>
-<td>slot 기반, 콘텐츠 독립적</td>
-</tr>
-<tr>
-<td><strong>pages</strong></td>
-<td>라우트 매핑 페이지</td>
-<td><code>ProjectsPage</code>, <code>SessionListPage</code>, <code>AIAutoFixPage</code>, <code>OptionsPage</code></td>
-<td>데이터 페칭, 상태 조합</td>
-</tr>
-</tbody>
-</table>
-<h3 id="22">2.2 의존성 규칙</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>atoms → (독립, 외부 의존 없음)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>molecules → atoms만 import
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>organisms → atoms + molecules + API/Store
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>templates → slot 기반 (레이아웃만)
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>pages → 모든 계층 사용 가능
-</code></pre></div>
-<h3 id="23">2.3 새 컴포넌트 작성 기준</h3>
-<ul>
-<li><strong>UI만?</strong> → atoms 또는 molecules</li>
-<li><strong>API 호출/비즈니스 로직?</strong> → organisms 또는 features</li>
-<li><strong>레이아웃?</strong> → templates</li>
-<li><strong>라우트에 연결?</strong> → pages</li>
-</ul>
-<hr />
-<h2 id="3-api-orval">3. API 코드 생성 (Orval)</h2>
-<p>백엔드 OpenAPI 스펙에서 Vue 3 Composition API 기반 API 훅을 자동 생성합니다.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yarn<span class="w"> </span>generate:api<span class="w">    </span><span class="c1"># orval 실행 → src/api/ 에 코드 생성</span>
-</code></pre></div>
-<h3 id="31">3.1 동작 방식</h3>
+<h2 id="1">1. 아키텍처 개요</h2>
 <ol>
-<li>백엔드 <code>/openapi.json</code> 스펙 읽기</li>
-<li><code>useQuery</code> / <code>useMutation</code> 훅 자동 생성</li>
-<li><code>src/api/</code> 디렉토리에 저장</li>
+<li><strong>이미지 빌드 분리</strong>: <code>backend/Dockerfile</code>과 <code>frontend/Dockerfile</code>을 각각의 컨텍스트(경로) 기준으로 개별 빌드하여 AWS ECR에 푸시합니다.</li>
+<li><strong>배포 오케스트레이션</strong>: 서버에 업로드된 <code>docker-compose.prod.yml</code>은 빌드된 ECR 이미지를 단순히 다운로드(Pull) 받아 컨테이너들을 엮어서 실행하는 역할을 수행합니다.</li>
 </ol>
-<h3 id="32">3.2 주의사항</h3>
-<ul>
-<li>백엔드 API 변경 시 반드시 <code>yarn generate:api</code> 재실행</li>
-<li>자동 생성 코드 직접 수정 금지 (재생성 시 덮어씌워짐)</li>
-</ul>
 <hr />
-<h2 id="4">4. 상태 관리</h2>
-<h3 id="41-pinia-stores">4.1 Pinia Stores (클라이언트 상태)</h3>
-<table>
-<thead>
-<tr>
-<th>Store</th>
-<th>역할</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>workspace.ts</code></td>
-<td>활성 워크스페이스 선택/전환, localStorage 영속</td>
-</tr>
-<tr>
-<td><code>ui.ts</code></td>
-<td>사이드바, 모달, 토스트 등 UI 상태</td>
-</tr>
-<tr>
-<td><code>counter.ts</code></td>
-<td>데모/카운터 (참고용)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="42-tanstack-vue-query">4.2 TanStack Vue Query (서버 상태)</h3>
-<ul>
-<li>API 데이터 캐싱 및 자동 갱신</li>
-<li>Orval이 자동 생성한 <code>useQuery</code>/<code>useMutation</code> 훅 사용</li>
-</ul>
-<h3 id="43-composables">4.3 Composables (재사용 로직)</h3>
-<table>
-<thead>
-<tr>
-<th>Composable</th>
-<th>역할</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>useFileUpload</code></td>
-<td>파일 업로드 핸들링 (드래그&amp;드롭, 다중 파일)</td>
-</tr>
-<tr>
-<td><code>useFiltering</code></td>
-<td>리스트 필터링 (검색, 상태별)</td>
-</tr>
-<tr>
-<td><code>usePagination</code></td>
-<td>페이지네이션 상태 관리</td>
-</tr>
-<tr>
-<td><code>useSorting</code></td>
-<td>정렬 상태 관리</td>
-</tr>
-<tr>
-<td><code>useToast</code></td>
-<td>토스트 알림 표시</td>
-</tr>
-</tbody>
-</table>
+<h2 id="2-dood">2. 도커 제어 핵심 설정 (DooD) 🚨</h2>
+<p>백엔드 컨테이너는 동적으로 새로운 크롤러 도커 컨테이너를 실행하고 제어해야 합니다. 이를 위해 다음 두 가지 필수 조건이 설정되어 있습니다.</p>
+<ol>
+<li><strong>Docker CLI 설치 (<code>backend/Dockerfile</code>)</strong>: 백엔드 내부에서 도커 데몬을 실행하지 않고 껍데기 명령어(<code>docker-ce-cli</code>)만 가볍게 설치합니다.</li>
+<li><strong>도커 소켓 마운트 (<code>docker-compose.prod.yml</code>)</strong>: 호스트 서버(EC2)의 도커 데몬 소켓(<code>/var/run/docker.sock</code>)을 백엔드 컨테이너 내부로 볼륨 마운트합니다. 컨테이너 내부에서 실행하는 도커 명령어는 이 소켓을 타고 <strong>실제 호스트 서버의 도커 데몬</strong>을 조종하게 됩니다.</li>
+<li><strong>Playwright 의존성 환경 (<code>backend/Dockerfile</code>)</strong>: <code>local</code> 실행기 모드를 정상적으로 구동시킬 수 있도록, 백엔드 이미지 빌드 시 Chromium 브라우저 엔진과 시스템 의존성 모듈들을 함께 설치합니다.</li>
+</ol>
 <hr />
-<h2 id="5-features">5. Features 디렉토리</h2>
-<p>도메인별 비즈니스 로직을 분리한 모듈입니다. pages에서 직접 비즈니스 로직을 작성하지 않고, features로 위임합니다.</p>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>역할</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ai-auto-fix/</code></td>
-<td>AI 자동 수정 세션 관리 로직</td>
-</tr>
-<tr>
-<td><code>crawling/</code></td>
-<td>크롤링 세션 실행/상태 관리</td>
-</tr>
-<tr>
-<td><code>dashboard/</code></td>
-<td>대시보드 데이터 집계</td>
-</tr>
-<tr>
-<td><code>jobs/</code></td>
-<td>Job CRUD/스케줄 관리</td>
-</tr>
-<tr>
-<td><code>projects/</code></td>
-<td>프로젝트 CRUD/필터</td>
-</tr>
-<tr>
-<td><code>ui/</code></td>
-<td>공통 UI 유틸리티</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="6-api">6. 백엔드 API 연동</h2>
-<h3 id="61-api">6.1 주요 API 엔드포인트</h3>
-<table>
-<thead>
-<tr>
-<th>태그</th>
-<th>Prefix</th>
-<th>주요 기능</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>projects</code></td>
-<td><code>/api/v1</code></td>
-<td>프로젝트 CRUD, 배치 업데이트, 필터 조회</td>
-</tr>
-<tr>
-<td><code>categories</code></td>
-<td><code>/api/v1</code></td>
-<td>카테고리 CRUD</td>
-</tr>
-<tr>
-<td><code>jobs</code></td>
-<td><code>/api/v1</code></td>
-<td>Job CRUD, 스케줄 관리</td>
-</tr>
-<tr>
-<td><code>crawling</code></td>
-<td><code>/api/v1</code></td>
-<td>크롤링 실행/중지, 세션 조회, 로그</td>
-</tr>
-<tr>
-<td><code>ai-auto-fix</code></td>
-<td><code>/api/v1</code></td>
-<td>AI Auto Fix 시작/상태/취소</td>
-</tr>
-<tr>
-<td><code>admin</code></td>
-<td><code>/api/v1/admin</code></td>
-<td>시스템 설정, 알림, Docker 정리</td>
-</tr>
-<tr>
-<td><code>workspaces</code></td>
-<td><code>/api/v1</code></td>
-<td>워크스페이스 CRUD</td>
-</tr>
-<tr>
-<td><code>enhanced-scripts</code></td>
-<td><code>/api/v1</code></td>
-<td>스크립트 개선</td>
-</tr>
-</tbody>
-</table>
-<h3 id="62-api">6.2 API 문서</h3>
-<ul>
-<li><strong>Swagger UI</strong>: <code>http://&lt;HOST&gt;:&lt;PORT&gt;/docs</code></li>
-<li><strong>ReDoc</strong>: <code>http://&lt;HOST&gt;:&lt;PORT&gt;/redoc</code></li>
-</ul>
+<h2 id="3-docker-composeprodyml">3. 운영 배포 설정 파일 (<code>docker-compose.prod.yml</code>)</h2>
+<p>운영 서버에 올라가는 핵심 배포 설정 파일입니다. 백엔드에서 DooD 환경을 위한 볼륨 바인딩(<code>- /var/run/docker.sock:/var/run/docker.sock</code>)이 구성되어 있음을 확인할 수 있습니다.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># =================================================================</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 운영(Production) 환경 전용 Docker Compose 파일</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># - 로컬 DB 미포함 (외부 DB 사용)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># - AWS ECR 이미지 사용</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># - 환경변수는 배포 시 .env 또는 Shell Env에서 주입받음</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># =================================================================</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="c1"># Migration 서비스</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="c1"># migration:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="c1">#   image: ${AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-2.amazonaws.com/vibe-migration:latest-prod</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="c1">#   container_name: vibe-crawler-migration</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="c1">#   command: alembic -c /app/alembic.ini upgrade head</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="c1">#   environment:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="c1">#     DATABASE_URL: ${DATABASE_URL}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="c1">#   networks:</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="c1">#     - vibe-network</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="c1">#   restart: &quot;no&quot;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="c1"># Backend API 서버</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nt">backend</span><span class="p">:</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-2.amazonaws.com/vibe-backend:latest-prod</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vibe-crawler-backend</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8080:8080&quot;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">      </span><span class="nt">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${DATABASE_URL}</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">      </span><span class="nt">PROJECT_ROOT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/app</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">      </span><span class="nt">SYSTEM_STORAGE_ROOT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/app/system_storage</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">      </span><span class="nt">HOST_SYSTEM_STORAGE_ROOT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${HOST_SYSTEM_STORAGE_ROOT:-/home/ubuntu/vibe-deployment/system_storage}</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">      </span><span class="nt">CORS_ORIGINS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CORS_ORIGINS:-*}</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">      </span><span class="nt">OPENAI_API_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${OPENAI_API_KEY}</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">      </span><span class="nt">PYTHONUNBUFFERED</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">      </span><span class="nt">ENV</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prod</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Asia/Seoul</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">      </span><span class="nt">MAIL_API_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${MAIL_API_URL:-http://api.solu-tion.co.kr:8080/query}</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">      </span><span class="nt">SMTP_SENDER_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${SMTP_SENDER_EMAIL:-hslee@mindknock.com}</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">      </span><span class="nt">PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${PORT:-8080}</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">      </span><span class="nt">API_BASE_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${API_BASE_URL:-http://backend:8080}</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">      </span><span class="nt">BASE_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${BASE_URL}</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${HOST_STORAGE_PATH:-/home/ubuntu/vibe-deployment/system_storage}:/app/system_storage</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend_logs:/app/logs</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/docker.sock:/var/run/docker.sock</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">      </span><span class="nt">migration</span><span class="p">:</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_completed_successfully</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vibe-network</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;curl&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;-f&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost:8080/health&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">      </span><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40s</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">  </span><span class="c1"># Frontend (Vue.js + Nginx)</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">  </span><span class="nt">frontend</span><span class="p">:</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-2.amazonaws.com/vibe-frontend:latest-prod</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vibe-crawler-frontend</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;443:443&quot;</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">      </span><span class="nt">backend</span><span class="p">:</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vibe-network</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="nt">networks</span><span class="p">:</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">  </span><span class="nt">vibe-network</span><span class="p">:</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">  </span><span class="nt">backend_logs</span><span class="p">:</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+</code></pre></div>
+<p>이 파일을 기반으로 서버 배포 스크립트는 <code>docker compose pull</code> 및 <code>docker compose up -d</code>를 수행하여 컨테이너 아키텍처를 가동합니다.</p>
 
 
 
