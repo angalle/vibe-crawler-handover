@@ -13,10 +13,6 @@
         <link rel="canonical" href="https://angalle.github.io/vibe-crawler-handover/%EC%9A%94%EC%B2%AD%20%EA%B0%80%EC%9D%B4%EB%93%9C/%ED%81%AC%EB%A1%A4%EB%A7%81_%EC%9E%AC%EC%88%98%EC%A7%91_API_%EA%B0%80%EC%9D%B4%EB%93%9C/">
       
       
-        <link rel="prev" href="../../issues/zombie-container-disk/">
-      
-      
-        <link rel="next" href="../%EC%9D%B8%ED%81%AC%EB%A1%9C%EC%8A%A4_%EB%A7%A4%EC%B2%B4_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%97%B0%EB%8F%99_%EA%B0%80%EC%9D%B4%EB%93%9C/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>크롤링 재수집 API - Vibe Crawling Platform - 인수인계 문서</title>
+        <title>크롤링 재수집(Refetch) API 연동 가이드 - Vibe Crawling Platform - 인수인계 문서</title>
       
     
     
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              크롤링 재수집 API
+              크롤링 재수집(Refetch) API 연동 가이드
             
           </span>
         </div>
@@ -1268,20 +1264,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1302,7 +1298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1312,220 +1308,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    크롤링 재수집 API
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    크롤링 재수집 API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="목차">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. API 개요
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. API 상세 스펙
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. API 상세 스펙">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-request-path-variable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1. Request Path Variable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-request-query-parameter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2. Request Query Parameter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-request-body-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3. Request Body (JSON)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4. Response
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 세션 상태 조회 API
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 세션 상태 조회 API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-request-path-variable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1. Request Path Variable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2. Response 예시
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%EC%9D%B8%ED%81%AC%EB%A1%9C%EC%8A%A4_%EB%A7%A4%EC%B2%B4_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%97%B0%EB%8F%99_%EA%B0%80%EC%9D%B4%EB%93%9C/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    인크로스 매체 데이터 연동 API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
